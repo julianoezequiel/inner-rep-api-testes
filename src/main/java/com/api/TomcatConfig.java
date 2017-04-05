@@ -17,7 +17,7 @@ import org.springframework.context.annotation.Configuration;
  * @author juliano.ezequiel
  *
  */
-@Configuration
+//@Configuration
 public class TomcatConfig {
 
 	@Value("${http.port}")
