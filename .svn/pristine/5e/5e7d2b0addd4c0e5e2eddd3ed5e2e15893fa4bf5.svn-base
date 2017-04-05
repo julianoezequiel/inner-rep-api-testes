@@ -1,0 +1,857 @@
+{
+	"variables": [],
+	"info": {
+		"name": "ServidoRep",
+		"_postman_id": "94d59dcd-d013-28d7-0ac4-513274b147ac",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Localhost",
+			"description": "",
+			"item": [
+				{
+					"name": "Lista de Rep Cadastrado",
+					"request": {
+						"url": "http://localhost:80/cadastro/rep",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\n    \"numeroSerie\": \"00009003640000197\",\n    \"chaveComunicacao\":\"**AUTENTICACAO**\"\n  }"
+						},
+						"description": "mostra os Rep cadastrado no sistema"
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar Rep",
+					"request": {
+						"url": "http://localhost:80/cadastro/rep",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\n    \"numeroSerie\": \"12345678901234567\",\n    \"chaveComunicacao\":\"**AUTENTICACAO**\"\n  }"
+						},
+						"description": "Cadastra um novo Rep no sistema"
+					},
+					"response": []
+				},
+				{
+					"name": "Excluir Rep",
+					"request": {
+						"url": "http://localhost:80/cadastro/rep/10",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "Exclui um Rep do sistema"
+					},
+					"response": []
+				},
+				{
+					"name": "Fila Tarefas",
+					"request": {
+						"url": "http://localhost:80/tarefas",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n   \"ultimoNsr\":101,\n   \"config\":0\n }\n"
+						},
+						"description": "Mostra as tarefas na fila para o Inner Rep realizar.\nInteração somente com o servidor."
+					},
+					"response": []
+				},
+				{
+					"name": "Excluir Fila Tarefas",
+					"request": {
+						"url": "http://localhost:80/excluirtarefas",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n   \"ultimoNsr\":101,\n   \"config\":0\n }\n"
+						},
+						"description": "Mostra as tarefas na fila para o Inner Rep realizar.\nInteração somente com o servidor."
+					},
+					"response": []
+				},
+				{
+					"name": "Total de NSR Coletado",
+					"request": {
+						"url": "http://localhost:80/coleta/total",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/plain",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "000000001619092016084002\r\n000000002619092016084502\r\n000000003619092016084702\r\n000000004619092016095502\r\n000000005419092016100019092016095811144477735\r\n0000000062190920161001   11144477735112345670010191            UNIVERSIDADE DEMONSTRAÇÃO                                                                                                                             RUA JOINVILLE                                                                                       \r\n0000000075190920161006I010072598147FERNANDA SOUSA MARTINE                                  11144477735\r\n0000000085190920161006I010256524502ROBERTO MATTOS                                          11144477735\r\n0000000095190920161006I010257528099MARCELO ARAÚJO                                          11144477735\r\n0000000105190920161006I010258024647TADEU CARVALHO                                          11144477735\r\n0000000115190920161006I010628390057ANA CLÁUDIA AMARAL                                      11144477735\r\n0000000125190920161006I010744242603JOÃO DA SILVA                                           11144477735\r\n0000000135190920161006I010833437957AUGUSTO ALBUQUERQUE FIGUEIROA                           11144477735\r\n0000000145190920161006I010833563723MARCO ANTÔNIO DA SILVAS                                 11144477735\r\n0000000155190920161006I010861380085ADALBERTO SOARES FILHO                                  11144477735\r\n0000000165190920161006I010877996196RICARDO DA SILVA                                        11144477735\r\n0000000175190920161006I012050866463JOSÉ CARLOS MACORATTI                                   11144477735\r\n0000000185190920161006I012078962130FILHO DO REI                                            11144477735\r\n0000000195190920161006I012183223113JULIANA ALVARO FONSECA                                  11144477735\r\n0000000205190920161006I012203703654ADRIANA CONCEIÇÃO                                       11144477735\r\n0000000215190920161006I012243121729FABIANA BORGES                                          11144477735\r\n0000000225190920161006I012326053348NATHAN CESAR PRUDENTE                                   11144477735\r\n0000000235190920161006I012418812563VICTOR MATHEUS BEDUSCHI                                 11144477735\r\n0000000245190920161006I012972521724EMANUEL LAMIM                                           11144477735\r\n0000000255190920161006I013875968092BEATRIZ DA SILVA                                        11144477735\r\n0000000265190920161006I019523072229KATIA SOBRAL                                            11144477735\r\n0000000275190920161006I022222880229ISAURA MOURA                                            11144477735\r\n0000000285190920161006I023180609865PAMELA RUARO                                            11144477735\r\n0000000295190920161006I030226977856ROSELI SARNEY                                           11144477735\r\n0000000305190920161006I035203470110OTTO GONSALVEZ                                          11144477735\r\n0000000315190920161006I036223172279ADILSON OLIVEIRA                                        11144477735\r\n0000000325190920161006I038278686947RAID KOMANI                                             11144477735\r\n0000000335190920161006I055992038283ISRAEL SUBIRA                                           11144477735\r\n0000000345190920161006I060035088765GETULIO VARGAS                                          11144477735\r\n0000000355190920161006I073888441113JULIA PEREIRA SANTANA                                   11144477735\r\n0000000365190920161006I077297094538BERNARDO NORGENS                                        11144477735\r\n0000000375190920161006I096909513010MARIA CAMILA SOARES                                     11144477735\r\n0000000383190920161009012203703654\r\n0000000395190920161011E019523072229KATIA SOBRAL                                            11144477735\r\n0000000405190920161011I019523072229KATIA SOBRAL                                            11144477735\r\n0000000413190920161017012203703654\r\n0000000425190920161019E010256524502ROBERTO MATTOS                                          11144477735\r\n0000000435190920161019E010257528099MARCELO ARAÚJO                                          11144477735\r\n0000000445190920161019E010744242603JOÃO DA SILVA                                           11144477735\r\n0000000455190920161019E010833437957AUGUSTO ALBUQUERQUE FIGUEIROA                           11144477735\r\n0000000465190920161019E010833563723MARCO ANTÔNIO DA SILVAS                                 11144477735\r\n0000000475190920161019E010861380085ADALBERTO SOARES FILHO                                  11144477735\r\n0000000485190920161019E010877996196RICARDO DA SILVA                                        11144477735\r\n0000000495190920161019E012050866463JOSÉ CARLOS MACORATTI                                   11144477735\r\n0000000505190920161019E012183223113JULIANA ALVARO FONSECA                                  11144477735\r\n0000000515190920161019E012203703654ADRIANA CONCEIÇÃO                                       11144477735\r\n0000000525190920161019E012326053348NATHAN CESAR PRUDENTE                                   11144477735\r\n0000000535190920161019A019523072229KATIA SOBRAL                                            11144477735\r\n0000000545190920161019E060035088765GETULIO VARGAS                                          11144477735\r\n000000055419092016101919092016101911144477735\r\n0000000565190920161019I010256524502ROBERTO MATTOS                                          11144477735\r\n0000000575190920161019I010257528099MARCELO ARAÚJO                                          11144477735\r\n0000000585190920161019I010744242603JOÃO DA SILVA                                           11144477735\r\n0000000595190920161019I010833437957AUGUSTO ALBUQUERQUE FIGUEIROA                           11144477735\r\n0000000605190920161019I010833563723MARCO ANTÔNIO DA SILVAS                                 11144477735\r\n0000000615190920161019I010861380085ADALBERTO SOARES FILHO                                  11144477735\r\n0000000625190920161019I010877996196RICARDO DA SILVA                                        11144477735\r\n0000000635190920161019I012050866463JOSÉ CARLOS MACORATTI                                   11144477735\r\n0000000645190920161019I012183223113JULIANA ALVARO FONSECA                                  11144477735\r\n0000000655190920161019I012203703654ADRIANA CONCEIÇÃO                                       11144477735\r\n0000000665190920161019I012326053348NATHAN CESAR PRUDENTE                                   11144477735\r\n0000000675190920161019I060035088765GETULIO VARGAS                                          11144477735\r\n0000000683190920161020012203703654\r\n0000000695190920161022A010628390057ANA CLÁUDIA AMARAL                                      11144477735\r\n0000000703190920161022012203703654\r\n0000000713190920161022010628390057\r\n0000000725190920161023A010628390057ANA CLÁUDIA AMARAL                                      11111111111\r\n0000000733190920161027010628390057\r\n0000000743190920161027010628390057\r\n0000000753190920161030010628390057\r\n0000000765190920161032A010628390057ANA CLÁUDIA AMARAL                                      11144477735\r\n0000000773190920161033010628390057\r\n0000000785190920161036E010628390057ANA CLÁUDIA AMARAL                                      11144477735\r\n0000000795190920161038I010628390057ANA CLÁUDIA AMARAL                                      11144477735\r\n0000000803190920161047010628390057\r\n0000000815190920161049A010628390057ANA CLÁUDIA AMARAL                                      11144477735\r\n0000000823190920161055010628390057\r\n0000000835190920161100I022975512456ABDNEGO SADRAQUE MESACRE                                11144477735\r\n0000000843190920161100022975512456\r\n0000000853190920161109022975512456\r\n0000000865190920161132A096909513010MARIA CAMILA SOARES                                     11144477735\r\n0000000875190920161133A019523072229KATIA SOBRAL                                            11144477735\r\n0000000885190920161133A010628390057ANA CLÁUDIA AMARAL                                      11144477735\r\n0000000895190920161133A022975512456ABDNEGO SADRAQUE MESACRE                                11144477735\r\n0000000903190920161139022975512456\r\n0000000915190920161152A010628390057ANA CLÁUDIA AMARAL                                      11144477735\r\n0000000925190920161152E019523072229KATIA SOBRAL                                            11144477735\r\n0000000935190920161152E022975512456ABDNEGO SADRAQUE MESACRE                                11144477735\r\n0000000945190920161152I065244170147FERNANDA RUARA                                          11144477735\r\n0000000955190920161152A096909513010MARIA CAMILA SOARES                                     11144477735\r\n0000000965190920161225A012243121729FABIANA BORGES                                          11144477735\r\n000000097619092016130506\r\n0000000983190920161305012243121729\r\n000000099419092016131019092016131011144477735\r\n000000100419092016132719092016132711144477735\r\n000000101419092016132719092016132711144477735\r\n000000102419092016132719092016132711144477735\r\n"
+						},
+						"description": "Total de NSR coletados do Rep. Interação somnete com o servidor."
+					},
+					"response": []
+				},
+				{
+					"name": "Cancelar Coleta",
+					"request": {
+						"url": "http://localhost:80/coleta/cancelar",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nsrProcessado\":\"1000\"\n}"
+						},
+						"description": "Cancela uma coleta em andamento.\nInteração com o Rep."
+					},
+					"response": []
+				},
+				{
+					"name": "Enviar empregado",
+					"request": {
+						"url": "http://localhost:80/agendarTarefa/empregado/enviar",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n  \"fCB\":\"000000000123422\",\n  \"fCP\":\"000000000123452\",\n  \"fCT\":\"000000000123452\",\n  \"fNome\":\"AAAÇÇÇÇÇÇÇÇ\",\n  \"fNEx\":\"EMPREGADO ÇÃO\",\n  \"fPis\":\"088888888881\",\n  \"fSenha\":\"1111\"\n }\n"
+						},
+						"description": "Solicita ao servidor o envio para o Rep do empregado."
+					},
+					"response": []
+				},
+				{
+					"name": "Receber empregado",
+					"request": {
+						"url": "http://localhost:80/agendarTarefa/empregado/receber",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n  \"fPis\":\"088888888882\"\n }\n"
+						},
+						"description": "Solicita ao servidor que receba do Rep os dados do empregado"
+					},
+					"response": []
+				},
+				{
+					"name": "Excluir empregado",
+					"request": {
+						"url": "http://localhost:80/agendarTarefa/empregado/excluir",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n  \"fPis\":\"088888888882\"\n }\n"
+						},
+						"description": "Solicita ao servidor que o Rep excluir o empregado"
+					},
+					"response": []
+				},
+				{
+					"name": "Enviar empregador",
+					"request": {
+						"url": "http://localhost:80/agendarTarefa/empregador/enviar",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n  \"eId\": \"12339903000180\",\n  \"eLoc\": \"ENTRADA-PORTARIA 11s1\",\n  \"eRS\": \"TOPDATA SISTEMAS DE AUTOMAÇÃO LTDA\",\n  \"eTpId\": \"1\"\n }\n"
+						},
+						"description": "Solicita ao servidor que envie o empregador para o Rep"
+					},
+					"response": []
+				},
+				{
+					"name": "Receber empregador",
+					"request": {
+						"url": "http://localhost:80/agendarTarefa/empregador/receber",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n\n }\n"
+						},
+						"description": "Solicita ao servidor que receba o empregador do Rep"
+					},
+					"response": []
+				},
+				{
+					"name": "Receber Coleta",
+					"request": {
+						"url": "http://localhost:80/agendarTarefa/coleta",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n  \"cNsrI\": \"1348391\",\n  \"cNsrF\": \"1358391\",\n  \"cDtI\": \"23032017\",\n  \"cDtF\" : \"23032017\"\n }\n"
+						},
+						"description": "Solicita ao servidor a coleta dos NSR"
+					},
+					"response": []
+				},
+				{
+					"name": "Recebe Coleta Dump",
+					"request": {
+						"url": "http://localhost:80/agendarTarefa/coletadump",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n  \"cDEndIni\": 1,\n  \"cDEndFim\": 100000\n }\n"
+						},
+						"description": "Solicita ao servidor que receba do Rep os registro por dump"
+					},
+					"response": []
+				},
+				{
+					"name": "Receber Lista Bio",
+					"request": {
+						"url": "http://localhost:80/agendarTarefa/listabiometria",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n  \"empregadoPis\":\"010892044896\"\n }\n"
+						},
+						"description": "Solicita a lista de usuários bio para o Inner Rep. Esta lista esta armazena em memoria no servidor.\nInteração com o Rep."
+					},
+					"response": []
+				},
+				{
+					"name": "Visualizar Lista Bio",
+					"request": {
+						"url": "http://localhost:80/listabio",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"fpid\":[\n    \"11111111\",\"2222222222222\",\"44444444444444444\"\n    ]\n}"
+						},
+						"description": "Recebe a lista bio, existente na memoria do servidor.\nInteração somente com o servidor"
+					},
+					"response": []
+				},
+				{
+					"name": "Receber Dados Bio",
+					"request": {
+						"url": "http://localhost:80/agendarTarefa/biometria/receber",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n  \"fPis\":\"088888888884\"\n }\n"
+						},
+						"description": "Solicita ao servidor que receba do Rep a biometria de um funcionário. Após o recebimento da biometria, o servidor amazena em base a biometria."
+					},
+					"response": []
+				},
+				{
+					"name": "Enviar Dados Bio",
+					"request": {
+						"url": "http://localhost:80/agendarTarefa/biometria/enviar",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n  \"fPis\":\"088888888884\"\n }\n"
+						},
+						"description": "Solicita ao servidor que envie uma biometria para Rep. Esta biometria deve estar na base."
+					},
+					"response": []
+				},
+				{
+					"name": "Excluir Biometria",
+					"request": {
+						"url": "http://localhost:80/agendarTarefa/biometria/excluir",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n  \"fPis\":\"088888888884\"\n }\n"
+						},
+						"description": "Solicita ao servidor a exclusão da biomteria de um empregado no do Rep"
+					},
+					"response": []
+				},
+				{
+					"name": "Solicitar Lista Empregados(Sincronizar)",
+					"request": {
+						"url": "http://localhost:80/agendarTarefa/listaempregados",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n  \"empregadoPis\":\"010892044896\"\n }\n"
+						},
+						"description": "Solicita ao servidor que receba a lista completa de empregados"
+					},
+					"response": []
+				},
+				{
+					"name": "Receber Lista Empregados por Dump",
+					"request": {
+						"url": "http://localhost:80/agendarTarefa/listaempregadosdump/receber",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n  \n }\n"
+						},
+						"description": "Solicita ao servidor que receba do Rep a lista de empregador por dump"
+					},
+					"response": []
+				},
+				{
+					"name": "Envia Lista Empregados por Dump",
+					"request": {
+						"url": "http://localhost:80/agendarTarefa/listaempregadosdump/enviar",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n  \n }\n"
+						},
+						"description": "Solicita ao servidor que envia o dump da lista de empregados"
+					},
+					"response": []
+				},
+				{
+					"name": "Receber Informações",
+					"request": {
+						"url": "http://localhost:80/agendarTarefa/info",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n  \"cfgSCfg\": \"11111\",\n  \"cfgSPend\": \"11111\",\n  \"cfgSBio\": \"11111\"\n }\n"
+						},
+						"description": "solicita ao servidor que receba as informações do Rep"
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar FW",
+					"request": {
+						"url": "http://localhost:80/agendarTarefa/atualizarfirmware",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n  \"cfgSCfg\": \"11111\",\n  \"cfgSPend\": \"11111\",\n  \"cfgSBio\": \"11111\"\n }\n"
+						},
+						"description": "Solicita ao Inner Rep que faça o donwload do arquivo arquivo IR1 para atualização do firmware"
+					},
+					"response": []
+				},
+				{
+					"name": "Receber Config Senhas",
+					"request": {
+						"url": "http://localhost:80/agendarTarefa/configuracoes/senha/receber",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n \n }\n"
+						},
+						"description": "Solicita ao servidor que receba as senhas de configurações do Rep"
+					},
+					"response": []
+				},
+				{
+					"name": "Enviar Config Senhas",
+					"request": {
+						"url": "http://localhost:80/agendarTarefa/configuracoes/senha/enviar",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n  \"cfgSCfg\": \"123456\",\n  \"cfgSPend\": \"123456\",\n  \"cfgSBio\": \"123456\"\n }\n"
+						},
+						"description": "solicita ao servidor que envia as senha para o Rep"
+					},
+					"response": []
+				},
+				{
+					"name": "Receber Config Relógio",
+					"request": {
+						"url": "http://localhost:80/agendarTarefa/relogio/receber",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n\n }\n"
+						},
+						"description": "solicita ao servidor que receba do Rep a data atual"
+					},
+					"response": []
+				},
+				{
+					"name": "Enviar Config Relógio",
+					"request": {
+						"url": "http://localhost:80/agendarTarefa/relogio/enviar",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n  \"cfgRelDia\": 14,\n  \"cfgRelMes\": 3,\n  \"cfgRelAno\": 2017,\n  \"cfgRelHora\": 14,\n  \"cfgRelMin\": 20,\n  \"cfgRelSeg\": 0\n }\n"
+						},
+						"description": "Altera e solicita o relogio(horário) do Inner Rep"
+					},
+					"response": []
+				},
+				{
+					"name": "Receber Config Horário Verão",
+					"request": {
+						"url": "http://localhost:80/agendarTarefa/horarioverao/receber",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n\n }\n"
+						},
+						"description": "solicita ao servidro que receba do Rep o horário de verão configurado"
+					},
+					"response": []
+				},
+				{
+					"name": "Enviar Config Horário Verão",
+					"request": {
+						"url": "http://localhost:80/agendarTarefa/horarioverao/enviar",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n\t\"cfgHVerDiaI\": 10,\n\t\"cfgHVerMesI\": 11,\n\t\"cfgHVerAnoI\": 2016,\n\t\n\t\"cfgHVerDiaF\": 10,\n\t\"cfgHVerMesF\": 3,\n\t\"cfgHVerAnoF\": 2017\n }\n"
+						},
+						"description": "solicita ao servidor que envie o horário de verão"
+					},
+					"response": []
+				},
+				{
+					"name": "Enviar Config Cartões",
+					"request": {
+						"url": "http://localhost:80/agendarTarefa/cartoes/enviar",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n  \"cfgCMascB\": [1,2,3,4,5,6,7,8,9,0,11,0,13,14,15,16],\n  \"cfgCMascP\": [1,2,3,4,5,6,7,8,9,0,11,0,13,14,15,16],\n  \"cfgCDigFixo\": 1,\n  \"cfgCTpB\": 1,\n  \"cfgCTpP\": 2,\n  \"cfgCTlm\":[0,0,0,0,0,0,0,0,0,0,0,0]\n }\n"
+						},
+						"description": "solicita ao servidor que envie as configurações de cartões do Rep"
+					},
+					"response": []
+				},
+				{
+					"name": "Receber Config Cartões",
+					"request": {
+						"url": "http://localhost:80/agendarTarefa/cartoes/receber",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n\n }\n"
+						},
+						"description": "solicita ao servidor que receba as configurações de cartões do Rep"
+					},
+					"response": []
+				},
+				{
+					"name": "Recebe Config Rede",
+					"request": {
+						"url": "http://localhost:80/agendarTarefa/rede/receber",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n\n }\n"
+						},
+						"description": "solicita ao servidor que receba as configurações de rede do Rep"
+					},
+					"response": []
+				},
+				{
+					"name": "Enviar Config Rede",
+					"request": {
+						"url": "http://localhost:80/agendarTarefa/rede/enviar",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n\t\"cfgRIpRep\": [10,0,45,11],\n\t\"cfgRDhcp\": 0,\n\t\"cfgRPortRep\": 51000,\n\t\"cfgRNRep\":\"RepJuliano\",\n\t\"cfgRRepIn\":1,\n\t\"cfgRIpServ\":[192,162,0,1],\n\t\"cfgRPortServ\":51400,\n\t\"cfgRMasc\":[255,0,0,0],\n\t\"cfgRGat\":[10,0,0,7],\n\t\"cfgRIntCom\":5,\n\t\"cfgRNInt\" :1,\n\t\"cfgRTpDns\":3,\n\t\"cfgRNHost\": \"alfa_gemini.topdata.com.br\",\n\t\"cfgRIpDns\":[10,0,0,5]\n }\n"
+						},
+						"description": "solicita ao servidor que receba as configurações de rede do Rep"
+					},
+					"response": []
+				},
+				{
+					"name": "Recebe Config Web Server",
+					"request": {
+						"url": "http://localhost:80/agendarTarefa/configwebserve/receber",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n\n }\n"
+						},
+						"description": "solicita ao servidor que receba as configurações do WebServe do Rep"
+					},
+					"response": []
+				},
+				{
+					"name": "Enviar Config Web Server",
+					"request": {
+						"url": "http://localhost:80/agendarTarefa/configwebserve/enviar",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n  \"cfgWTpCfg\": 1,\n  \"cfgWIPS\": [10,0,0,7],\n  \"cfgWP80\": 1\n }\n"
+						},
+						"description": "solicita ao servidor que receba as configurações do WebServe do Rep"
+					},
+					"response": []
+				},
+				{
+					"name": "Receber Config Bio",
+					"request": {
+						"url": "http://localhost:80/agendarTarefa/ajustebio/receber",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\n}"
+						},
+						"description": "solicita ao servidor que receba as configurações(ajustes) de biometria do Rep"
+					},
+					"response": []
+				},
+				{
+					"name": "Enviar Config Bio",
+					"request": {
+						"url": "http://localhost:80/agendarTarefa/ajustebio/enviar",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"cfgBSegI\":7,\n\t\"cfgBSegV\":4,\n\t\"cfgBFL\":1,\n\t\"cfgBCA\":1,\n\t\"cfgBNLFD\":0,\n\t\"cfgBTO\":9,\n\t\"cfgBDD\":null\n\t\n}"
+						},
+						"description": "solicita ao servidor que receba as configurações(ajustes) de biometria do Rep"
+					},
+					"response": []
+				},
+				{
+					"name": "Receber Identificadores",
+					"request": {
+						"url": "http://localhost:80/agendarTarefa/identificadores/",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n\t\"cfgCMascB\": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16],\n\t\"cfgCMascP\": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16],\n\t\"cfgCDigFixo\": 1,\n\t\"cfgCTpB\": 2,\n\t\"cfgCTpP\": 2\n }\n"
+						},
+						"description": "solicita ao servidor que receba os identificadores do Rep"
+					},
+					"response": []
+				},
+				{
+					"name": "Upload Arquivos - FW",
+					"request": {
+						"url": "http://localhost:80/enviar/arquivos",
+						"method": "POST",
+						"header": [
+							{
+								"key": "//Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": "",
+								"disabled": true
+							},
+							{
+								"key": "//name",
+								"value": "file",
+								"description": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"enabled": true,
+									"src": "InnerRepPlusV3_39.IR1"
+								},
+								{
+									"key": "name",
+									"value": "firmware",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": "Envia para o servidor os arquivos de atualizações de Firmware e Páginas"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "http://localhost:80/autenticacao",
+			"request": {
+				"url": "http://localhost:80/auth",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t \"numeroSerie\": \"00009003641234569\",\n\t \"chaveAes\": [],\n\t \"chaveRsa\":[],\n\t \"chavePublica\":\"\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

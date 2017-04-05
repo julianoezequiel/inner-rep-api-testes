@@ -1,0 +1,1992 @@
+[2m2017-04-05 08:26:45.919[0;39m [32m INFO[0;39m Starting RepApiApplication on alfa_gemini with PID 4008 (C:\ServidorRepCripto\RepAPI_Cripto\target\classes started by juliano.ezequiel in C:\ServidorRepCripto\RepAPI_Cripto)
+[2m2017-04-05 08:26:45.922[0;39m [32m INFO[0;39m No active profile set, falling back to default profiles: default
+[2m2017-04-05 08:26:46.351[0;39m [32m INFO[0;39m Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@9310fc3: startup date [Wed Apr 05 08:26:46 BRT 2017]; root of context hierarchy
+[2m2017-04-05 08:26:48.966[0;39m [32m INFO[0;39m Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$cc7a541d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2m2017-04-05 08:26:49.908[0;39m [32m INFO[0;39m Tomcat initialized with port(s): 443 (https) 80 (http)
+[2m2017-04-05 08:26:49.921[0;39m [32m INFO[0;39m Starting service Tomcat
+[2m2017-04-05 08:26:49.923[0;39m [32m INFO[0;39m Starting Servlet Engine: Apache Tomcat/8.5.6
+[2m2017-04-05 08:26:50.055[0;39m [32m INFO[0;39m Initializing Spring embedded WebApplicationContext
+[2m2017-04-05 08:26:50.055[0;39m [32m INFO[0;39m Root WebApplicationContext: initialization completed in 3707 ms
+[2m2017-04-05 08:26:50.498[0;39m [32m INFO[0;39m Building JPA container EntityManagerFactory for persistence unit 'default'
+[2m2017-04-05 08:26:50.887[0;39m [33m WARN[0;39m Not loading a JDBC driver as driverClassName property is null.
+[2m2017-04-05 08:26:51.124[0;39m [33m WARN[0;39m Not loading a JDBC driver as driverClassName property is null.
+[2m2017-04-05 08:26:51.129[0;39m [33m WARN[0;39m Not loading a JDBC driver as driverClassName property is null.
+[2m2017-04-05 08:26:51.133[0;39m [33m WARN[0;39m Not loading a JDBC driver as driverClassName property is null.
+[2m2017-04-05 08:26:51.137[0;39m [33m WARN[0;39m Not loading a JDBC driver as driverClassName property is null.
+[2m2017-04-05 08:26:51.143[0;39m [33m WARN[0;39m Not loading a JDBC driver as driverClassName property is null.
+[2m2017-04-05 08:26:51.148[0;39m [33m WARN[0;39m Not loading a JDBC driver as driverClassName property is null.
+[2m2017-04-05 08:26:51.153[0;39m [33m WARN[0;39m Not loading a JDBC driver as driverClassName property is null.
+[2m2017-04-05 08:26:51.159[0;39m [33m WARN[0;39m Not loading a JDBC driver as driverClassName property is null.
+[2m2017-04-05 08:26:51.165[0;39m [33m WARN[0;39m Not loading a JDBC driver as driverClassName property is null.
+[2m2017-04-05 08:26:53.318[0;39m [32m INFO[0;39m Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2m2017-04-05 08:26:54.080[0;39m [32m INFO[0;39m Mapping filter: 'characterEncodingFilter' to: [/*]
+[2m2017-04-05 08:26:54.081[0;39m [32m INFO[0;39m Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+[2m2017-04-05 08:26:54.082[0;39m [32m INFO[0;39m Mapping filter: 'httpPutFormContentFilter' to: [/*]
+[2m2017-04-05 08:26:54.082[0;39m [32m INFO[0;39m Mapping filter: 'requestContextFilter' to: [/*]
+[2m2017-04-05 08:26:54.082[0;39m [32m INFO[0;39m Mapping filter: 'debugFilter' to urls: [/*]
+[2m2017-04-05 08:26:54.083[0;39m [32m INFO[0;39m Mapping filter: 'tokenFilter' to urls: [/restrict/*]
+[2m2017-04-05 08:26:54.083[0;39m [32m INFO[0;39m Mapping servlet: 'dispatcherServlet' to [/]
+[2m2017-04-05 08:26:55.086[0;39m [32m INFO[0;39m Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@9310fc3: startup date [Wed Apr 05 08:26:46 BRT 2017]; root of context hierarchy
+[2m2017-04-05 08:26:55.226[0;39m [32m INFO[0;39m Mapped "{[/agendarTarefa/info],methods=[GET],produces=[application/json;charset=UTF-8]}" onto public com.api.rep.entity.Tarefa com.api.rep.rest.AgendarTarefa.info() throws com.api.rep.service.ServiceException
+[2m2017-04-05 08:26:55.229[0;39m [32m INFO[0;39m Mapped "{[/agendarTarefa/empregado/{operacao}],methods=[POST],consumes=[application/json;charset=UTF-8]}" onto public com.api.rep.entity.Tarefa com.api.rep.rest.AgendarTarefa.empregado(com.api.rep.dto.comandos.EmpregadoCmd,java.lang.String) throws com.api.rep.service.ServiceException
+[2m2017-04-05 08:26:55.230[0;39m [32m INFO[0;39m Mapped "{[/agendarTarefa/coletadump],methods=[POST],consumes=[application/json;charset=UTF-8]}" onto public com.api.rep.entity.Tarefa com.api.rep.rest.AgendarTarefa.coletaCmd(com.api.rep.dto.comandos.ColetaDumpCmd) throws com.api.rep.service.ServiceException
+[2m2017-04-05 08:26:55.231[0;39m [32m INFO[0;39m Mapped "{[/agendarTarefa/coleta],methods=[POST],consumes=[application/json;charset=UTF-8]}" onto public com.api.rep.entity.Tarefa com.api.rep.rest.AgendarTarefa.coletaCmd(com.api.rep.dto.comandos.ColetaCmd) throws com.api.rep.service.ServiceException
+[2m2017-04-05 08:26:55.231[0;39m [32m INFO[0;39m Mapped "{[/agendarTarefa/rede/{operacao}],methods=[POST],consumes=[application/json;charset=UTF-8]}" onto public com.api.rep.entity.Tarefa com.api.rep.rest.AgendarTarefa.rede(com.api.rep.dto.comandos.ConfiguracoesRedeCmd,java.lang.String) throws com.api.rep.service.ServiceException
+[2m2017-04-05 08:26:55.232[0;39m [32m INFO[0;39m Mapped "{[/agendarTarefa/empregador/{operacao}],methods=[POST],consumes=[application/json;charset=UTF-8]}" onto public com.api.rep.entity.Tarefa com.api.rep.rest.AgendarTarefa.empregador(com.api.rep.dto.comandos.EmpregadorCmd,java.lang.String) throws com.api.rep.service.ServiceException
+[2m2017-04-05 08:26:55.232[0;39m [32m INFO[0;39m Mapped "{[/agendarTarefa/configuracoes/senha/{operacao}],methods=[POST],consumes=[application/json;charset=UTF-8]}" onto public com.api.rep.entity.Tarefa com.api.rep.rest.AgendarTarefa.configSenha(com.api.rep.dto.comandos.ConfiguracaoSenhaCmd,java.lang.String) throws com.api.rep.service.ServiceException
+[2m2017-04-05 08:26:55.232[0;39m [32m INFO[0;39m Mapped "{[/agendarTarefa/biometria/{operacao}],methods=[POST],consumes=[application/json;charset=UTF-8]}" onto public com.api.rep.entity.Tarefa com.api.rep.rest.AgendarTarefa.biometria(com.api.rep.dto.comandos.UsuarioBioCmd,java.lang.String) throws com.api.rep.service.ServiceException
+[2m2017-04-05 08:26:55.233[0;39m [32m INFO[0;39m Mapped "{[/agendarTarefa/atualizarfirmwaretodos],methods=[GET],produces=[application/json;charset=UTF-8]}" onto public void com.api.rep.rest.AgendarTarefa.atualizarFwTodos() throws com.api.rep.service.ServiceException
+[2m2017-04-05 08:26:55.234[0;39m [32m INFO[0;39m Mapped "{[/agendarTarefa/atualizarfirmware],methods=[GET],produces=[application/json;charset=UTF-8]}" onto public com.api.rep.entity.Tarefa com.api.rep.rest.AgendarTarefa.atualizarFw() throws com.api.rep.service.ServiceException
+[2m2017-04-05 08:26:55.235[0;39m [32m INFO[0;39m Mapped "{[/agendarTarefa/listabiometria],methods=[GET]}" onto public com.api.rep.entity.Tarefa com.api.rep.rest.AgendarTarefa.listabiometria() throws com.api.rep.service.ServiceException
+[2m2017-04-05 08:26:55.235[0;39m [32m INFO[0;39m Mapped "{[/agendarTarefa/cartoes/{operacao}],methods=[POST],consumes=[application/json;charset=UTF-8]}" onto public com.api.rep.entity.Tarefa com.api.rep.rest.AgendarTarefa.cartoes(com.api.rep.dto.comandos.ConfiguracoesCartoesCmd,java.lang.String) throws com.api.rep.service.ServiceException
+[2m2017-04-05 08:26:55.235[0;39m [32m INFO[0;39m Mapped "{[/agendarTarefa/listaempregados],methods=[GET]}" onto public com.api.rep.entity.Tarefa com.api.rep.rest.AgendarTarefa.listaempregados() throws com.api.rep.service.ServiceException
+[2m2017-04-05 08:26:55.236[0;39m [32m INFO[0;39m Mapped "{[/agendarTarefa/atualizarpaginas],methods=[GET],produces=[application/json;charset=UTF-8]}" onto public com.api.rep.entity.Tarefa com.api.rep.rest.AgendarTarefa.atualizarPaginas() throws com.api.rep.service.ServiceException
+[2m2017-04-05 08:26:55.236[0;39m [32m INFO[0;39m Mapped "{[/agendarTarefa/identificadores],methods=[GET],produces=[application/json;charset=UTF-8]}" onto public com.api.rep.entity.Tarefa com.api.rep.rest.AgendarTarefa.identificadores() throws com.api.rep.service.ServiceException
+[2m2017-04-05 08:26:55.237[0;39m [32m INFO[0;39m Mapped "{[/agendarTarefa/ajustebio/{operacao}],methods=[POST],consumes=[application/json;charset=UTF-8]}" onto public com.api.rep.entity.Tarefa com.api.rep.rest.AgendarTarefa.ajusteBio(com.api.rep.dto.comandos.AjustesBioCmd,java.lang.String) throws com.api.rep.service.ServiceException
+[2m2017-04-05 08:26:55.237[0;39m [32m INFO[0;39m Mapped "{[/agendarTarefa/relogio/{operacao}],methods=[POST],consumes=[application/json;charset=UTF-8]}" onto public com.api.rep.entity.Tarefa com.api.rep.rest.AgendarTarefa.relogio(com.api.rep.dto.comandos.RelogioCmd,java.lang.String) throws com.api.rep.service.ServiceException
+[2m2017-04-05 08:26:55.238[0;39m [32m INFO[0;39m Mapped "{[/agendarTarefa/horarioverao/{operacao}],methods=[POST],consumes=[application/json;charset=UTF-8]}" onto public com.api.rep.entity.Tarefa com.api.rep.rest.AgendarTarefa.horarioverao(com.api.rep.dto.comandos.HorarioVeraoCmd,java.lang.String) throws com.api.rep.service.ServiceException
+[2m2017-04-05 08:26:55.238[0;39m [32m INFO[0;39m Mapped "{[/agendarTarefa/verificacao],methods=[GET],produces=[application/json;charset=UTF-8]}" onto public com.api.rep.entity.Tarefa com.api.rep.rest.AgendarTarefa.verificacao() throws com.api.rep.service.ServiceException
+[2m2017-04-05 08:26:55.239[0;39m [32m INFO[0;39m Mapped "{[/agendarTarefa/configwebserve/{operacao}],methods=[POST],consumes=[application/json;charset=UTF-8]}" onto public com.api.rep.entity.Tarefa com.api.rep.rest.AgendarTarefa.configWebServer(com.api.rep.dto.comandos.ConfiguracacoesWebServerCmd,java.lang.String) throws com.api.rep.service.ServiceException
+[2m2017-04-05 08:26:55.239[0;39m [32m INFO[0;39m Mapped "{[/agendarTarefa/listaempregadosdump/{operacao}],methods=[POST]}" onto public com.api.rep.entity.Tarefa com.api.rep.rest.AgendarTarefa.listaempreagadosdump(java.lang.String) throws com.api.rep.service.ServiceException
+[2m2017-04-05 08:26:55.240[0;39m [32m INFO[0;39m Mapped "{[/agendarTarefa/atualizarpaginastodos],methods=[GET],produces=[application/json;charset=UTF-8]}" onto public void com.api.rep.rest.AgendarTarefa.atualizarPaginasTodos() throws com.api.rep.service.ServiceException
+[2m2017-04-05 08:26:55.240[0;39m [32m INFO[0;39m Mapped "{[/agendarTarefa/listabiometriacomdigitais],methods=[GET]}" onto public com.api.rep.entity.Tarefa com.api.rep.rest.AgendarTarefa.listabiometriacomdigitais() throws com.api.rep.service.ServiceException
+[2m2017-04-05 08:26:55.242[0;39m [32m INFO[0;39m Mapped "{[/auth],methods=[POST],consumes=[application/json;charset=UTF-8],produces=[application/json;charset=UTF-8]}" onto public org.springframework.http.ResponseEntity<com.api.rep.dto.comunicacao.CriptoRnd> com.api.rep.rest.auth.AuthRestController.criptoRnd(com.api.rep.dto.comunicacao.RepDTO) throws com.api.rep.service.ServiceException
+[2m2017-04-05 08:26:55.243[0;39m [32m INFO[0;39m Mapped "{[/auth/sign],methods=[POST],consumes=[application/json;charset=UTF-8],produces=[application/json;charset=UTF-8]}" onto public org.springframework.http.ResponseEntity<com.api.rep.dto.comunicacao.TokenDTO> com.api.rep.rest.auth.AuthRestController.autenticar(com.api.rep.dto.comunicacao.RepDTO) throws com.api.rep.service.ServiceException,java.security.InvalidKeyException,java.security.NoSuchAlgorithmException,javax.crypto.NoSuchPaddingException,javax.crypto.IllegalBlockSizeException,javax.crypto.BadPaddingException,java.security.InvalidAlgorithmParameterException,java.security.spec.InvalidKeySpecException
+[2m2017-04-05 08:26:55.246[0;39m [32m INFO[0;39m Mapped "{[/enviar/arquivos],methods=[POST],consumes=[multipart/form-data],produces=[text/plain]}" onto public org.springframework.http.ResponseEntity<?> com.api.rep.rest.comandos.AtualizarFirmwareRestController.uploadArquivo(java.lang.String,org.springframework.web.multipart.MultipartFile) throws com.api.rep.service.ServiceException
+[2m2017-04-05 08:26:55.246[0;39m [32m INFO[0;39m Mapped "{[/restrict/atualizarfw/{nsu}],methods=[GET],produces=[multipart/form-data]}" onto public org.springframework.http.ResponseEntity<?> com.api.rep.rest.comandos.AtualizarFirmwareRestController.enviarFirmware(java.lang.Integer) throws com.api.rep.service.ServiceException
+[2m2017-04-05 08:26:55.246[0;39m [32m INFO[0;39m Mapped "{[/restrict/atualizarpaginas/{nsu}],methods=[GET],produces=[multipart/form-data]}" onto public org.springframework.http.ResponseEntity<?> com.api.rep.rest.comandos.AtualizarFirmwareRestController.enviarPaginas(java.lang.Integer) throws com.api.rep.service.ServiceException
+[2m2017-04-05 08:26:55.247[0;39m [32m INFO[0;39m Mapped "{[/listabio],methods=[GET],produces=[application/json;charset=UTF-8]}" onto public org.springframework.http.ResponseEntity<?> com.api.rep.rest.comandos.BiometriaRestController.receberListaBio() throws com.api.rep.service.ServiceException,com.fasterxml.jackson.core.JsonProcessingException
+[2m2017-04-05 08:26:55.248[0;39m [32m INFO[0;39m Mapped "{[/restrict/empregado/listabio],methods=[POST],consumes=[multipart/form-data]}" onto public org.springframework.http.ResponseEntity<?> com.api.rep.rest.comandos.BiometriaRestController.receberListaBio(org.springframework.web.multipart.MultipartFile) throws com.api.rep.service.ServiceException,java.io.IOException
+[2m2017-04-05 08:26:55.248[0;39m [32m INFO[0;39m Mapped "{[/restrict/empregado/bio/{nsu}],methods=[POST],consumes=[multipart/form-data]}" onto public org.springframework.http.ResponseEntity<?> com.api.rep.rest.comandos.BiometriaRestController.receber(java.lang.Integer,org.springframework.web.multipart.MultipartFile) throws com.api.rep.service.ServiceException
+[2m2017-04-05 08:26:55.249[0;39m [32m INFO[0;39m Mapped "{[/restrict/empregado/bio/{nsu}],methods=[GET],produces=[multipart/form-data]}" onto public org.springframework.http.ResponseEntity<?> com.api.rep.rest.comandos.BiometriaRestController.enviar(java.lang.Integer) throws com.api.rep.service.ServiceException,java.io.IOException
+[2m2017-04-05 08:26:55.250[0;39m [32m INFO[0;39m Mapped "{[/restrict/empregado/lista/digitais],methods=[POST],consumes=[application/json;charset=UTF-8]}" onto public org.springframework.http.ResponseEntity<?> com.api.rep.rest.comandos.BiometriaRestController.receberListaBioAgendarDigitais(com.api.rep.dto.comandos.ListaBio) throws com.api.rep.service.ServiceException,com.fasterxml.jackson.core.JsonProcessingException
+[2m2017-04-05 08:26:55.251[0;39m [32m INFO[0;39m Mapped "{[/coleta/total],methods=[GET],produces=[application/json;charset=UTF-8]}" onto public org.springframework.http.ResponseEntity<?> com.api.rep.rest.comandos.ColetaRestController.total() throws com.api.rep.service.ServiceException
+[2m2017-04-05 08:26:55.252[0;39m [32m INFO[0;39m Mapped "{[/coleta],methods=[GET],produces=[application/json;charset=UTF-8]}" onto public org.springframework.http.ResponseEntity<java.util.Collection<com.api.rep.entity.Nsr>> com.api.rep.rest.comandos.ColetaRestController.bucarPorRep() throws com.api.rep.service.ServiceException
+[2m2017-04-05 08:26:55.254[0;39m [32m INFO[0;39m Mapped "{[/coleta/removertodos],methods=[GET],produces=[application/json;charset=UTF-8]}" onto public org.springframework.http.ResponseEntity<?> com.api.rep.rest.comandos.ColetaRestController.excluirTodos() throws com.api.rep.service.ServiceException
+[2m2017-04-05 08:26:55.255[0;39m [32m INFO[0;39m Mapped "{[/restrict/coleta/dumping/{nsu}],methods=[POST],consumes=[multipart/form-data]}" onto public org.springframework.http.ResponseEntity<?> com.api.rep.rest.comandos.ColetaRestController.receberDumping(java.lang.Integer,org.springframework.web.multipart.MultipartFile) throws com.api.rep.service.ServiceException
+[2m2017-04-05 08:26:55.256[0;39m [32m INFO[0;39m Mapped "{[/coleta/cancelar],methods=[GET],produces=[application/json;charset=UTF-8]}" onto public org.springframework.http.ResponseEntity<?> com.api.rep.rest.comandos.ColetaRestController.cancelar() throws com.api.rep.service.ServiceException
+[2m2017-04-05 08:26:55.257[0;39m [32m INFO[0;39m Mapped "{[/restrict/coleta],methods=[PUT],consumes=[application/json;charset=UTF-8]}" onto public org.springframework.http.ResponseEntity<?> com.api.rep.rest.comandos.ColetaRestController.statusColeta(com.api.rep.dto.comunicacao.StatusColetaDTO) throws com.api.rep.service.ServiceException
+[2m2017-04-05 08:26:55.257[0;39m [32m INFO[0;39m Mapped "{[/restrict/coleta],methods=[POST],consumes=[multipart/form-data]}" onto public org.springframework.http.ResponseEntity<?> com.api.rep.rest.comandos.ColetaRestController.receber(org.springframework.web.multipart.MultipartFile) throws com.api.rep.service.ServiceException
+[2m2017-04-05 08:26:55.259[0;39m [32m INFO[0;39m Mapped "{[/restrict/config/webserver],methods=[POST],consumes=[multipart/form-data]}" onto public org.springframework.http.ResponseEntity<?> com.api.rep.rest.comandos.ConfiguracacoesRestController.receberConfigWebServer(org.springframework.web.multipart.MultipartFile) throws com.api.rep.service.ServiceException,java.io.IOException
+[2m2017-04-05 08:26:55.259[0;39m [32m INFO[0;39m Mapped "{[/restrict/config/senha],methods=[POST],consumes=[multipart/form-data]}" onto public org.springframework.http.ResponseEntity<?> com.api.rep.rest.comandos.ConfiguracacoesRestController.receberConfigSenhas(org.springframework.web.multipart.MultipartFile) throws com.api.rep.service.ServiceException,java.io.IOException
+[2m2017-04-05 08:26:55.260[0;39m [32m INFO[0;39m Mapped "{[/restrict/relogio],methods=[POST],consumes=[multipart/form-data]}" onto public org.springframework.http.ResponseEntity<?> com.api.rep.rest.comandos.ConfiguracacoesRestController.receberConfigRelogio(org.springframework.web.multipart.MultipartFile) throws com.api.rep.service.ServiceException,java.io.IOException
+[2m2017-04-05 08:26:55.261[0;39m [32m INFO[0;39m Mapped "{[/restrict/config/rede],methods=[POST],consumes=[multipart/form-data]}" onto public org.springframework.http.ResponseEntity<?> com.api.rep.rest.comandos.ConfiguracacoesRestController.receberConfigRede(org.springframework.web.multipart.MultipartFile) throws com.api.rep.service.ServiceException,java.io.IOException
+[2m2017-04-05 08:26:55.261[0;39m [32m INFO[0;39m Mapped "{[/restrict/empregado/ajustes],methods=[POST],consumes=[multipart/form-data]}" onto public org.springframework.http.ResponseEntity<?> com.api.rep.rest.comandos.ConfiguracacoesRestController.receberAjustesBio(org.springframework.web.multipart.MultipartFile) throws com.api.rep.service.ServiceException,java.io.IOException
+[2m2017-04-05 08:26:55.262[0;39m [32m INFO[0;39m Mapped "{[/restrict/config/cartoes],methods=[POST],consumes=[multipart/form-data]}" onto public org.springframework.http.ResponseEntity<?> com.api.rep.rest.comandos.ConfiguracacoesRestController.receberConfigCartoes(org.springframework.web.multipart.MultipartFile) throws com.api.rep.service.ServiceException,java.io.IOException
+[2m2017-04-05 08:26:55.263[0;39m [32m INFO[0;39m Mapped "{[/restrict/config/horarioverao],methods=[POST],consumes=[multipart/form-data]}" onto public org.springframework.http.ResponseEntity<?> com.api.rep.rest.comandos.ConfiguracacoesRestController.receberConfigHorarioVerao(org.springframework.web.multipart.MultipartFile) throws com.api.rep.service.ServiceException,java.io.IOException
+[2m2017-04-05 08:26:55.264[0;39m [32m INFO[0;39m Mapped "{[/restrict/empregado/lista/{nsu}],methods=[GET],produces=[multipart/form-data]}" onto public org.springframework.http.ResponseEntity<?> com.api.rep.rest.comandos.EmpregadoRestController.enviarDump(java.lang.Integer) throws com.api.rep.service.ServiceException
+[2m2017-04-05 08:26:55.265[0;39m [32m INFO[0;39m Mapped "{[/restrict/empregado/lista/{nsu}],methods=[POST],consumes=[multipart/form-data]}" onto public org.springframework.http.ResponseEntity<?> com.api.rep.rest.comandos.EmpregadoRestController.receberDumping(java.lang.Integer,org.springframework.web.multipart.MultipartFile) throws com.api.rep.service.ServiceException
+[2m2017-04-05 08:26:55.265[0;39m [32m INFO[0;39m Mapped "{[/restrict/empregado],methods=[GET],consumes=[application/json;charset=UTF-8]}" onto public org.springframework.http.ResponseEntity<java.util.Collection<com.api.rep.entity.Empregado>> com.api.rep.rest.comandos.EmpregadoRestController.buscarTodos()
+[2m2017-04-05 08:26:55.266[0;39m [32m INFO[0;39m Mapped "{[/restrict/empregado/lista],methods=[POST],consumes=[multipart/form-data]}" onto public org.springframework.http.ResponseEntity<?> com.api.rep.rest.comandos.EmpregadoRestController.receberLista(org.springframework.web.multipart.MultipartFile) throws com.api.rep.service.ServiceException,com.fasterxml.jackson.core.JsonParseException,com.fasterxml.jackson.databind.JsonMappingException,java.io.IOException
+[2m2017-04-05 08:26:55.267[0;39m [32m INFO[0;39m Mapped "{[/restrict/empregado],methods=[POST],consumes=[multipart/form-data]}" onto public org.springframework.http.ResponseEntity<?> com.api.rep.rest.comandos.EmpregadoRestController.receber(org.springframework.web.multipart.MultipartFile) throws com.api.rep.service.ServiceException,com.fasterxml.jackson.core.JsonParseException,com.fasterxml.jackson.databind.JsonMappingException,java.io.IOException
+[2m2017-04-05 08:26:55.270[0;39m [32m INFO[0;39m Mapped "{[/restrict/empregador/cadastro],methods=[POST],consumes=[application/json;charset=UTF-8]}" onto public org.springframework.http.ResponseEntity<com.api.rep.entity.Empregador> com.api.rep.rest.comandos.EmpregadorRestController.salvar(com.api.rep.entity.Empregador) throws com.api.rep.service.ServiceException
+[2m2017-04-05 08:26:55.271[0;39m [32m INFO[0;39m Mapped "{[/restrict/empregador],methods=[GET],consumes=[application/json;charset=UTF-8]}" onto public org.springframework.http.ResponseEntity<java.util.Collection<com.api.rep.entity.Empregador>> com.api.rep.rest.comandos.EmpregadorRestController.buscarTodos()
+[2m2017-04-05 08:26:55.272[0;39m [32m INFO[0;39m Mapped "{[/restrict/empregador],methods=[POST],consumes=[multipart/form-data]}" onto public org.springframework.http.ResponseEntity<?> com.api.rep.rest.comandos.EmpregadorRestController.receber(org.springframework.web.multipart.MultipartFile) throws com.api.rep.service.ServiceException,com.fasterxml.jackson.core.JsonParseException,com.fasterxml.jackson.databind.JsonMappingException,java.io.IOException
+[2m2017-04-05 08:26:55.273[0;39m [32m INFO[0;39m Mapped "{[/restrict/empregador/cadastro],methods=[PUT],consumes=[application/json;charset=UTF-8]}" onto public org.springframework.http.ResponseEntity<com.api.rep.entity.Empregador> com.api.rep.rest.comandos.EmpregadorRestController.atualizar(com.api.rep.entity.Empregador) throws com.api.rep.service.ServiceException
+[2m2017-04-05 08:26:55.274[0;39m [32m INFO[0;39m Mapped "{[/restrict/empregador/cadastro/{id}],methods=[DELETE],consumes=[application/json;charset=UTF-8]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.api.rep.rest.comandos.EmpregadorRestController.excluir(java.lang.Integer) throws com.api.rep.service.ServiceException
+[2m2017-04-05 08:26:55.275[0;39m [32m INFO[0;39m Mapped "{[/restrict/identificacao],methods=[POST],consumes=[multipart/form-data]}" onto public org.springframework.http.ResponseEntity<?> com.api.rep.rest.comandos.IdentificadoresRestController.receberConfigIdentificadores(org.springframework.web.multipart.MultipartFile) throws com.api.rep.service.ServiceException,java.io.IOException
+[2m2017-04-05 08:26:55.277[0;39m [32m INFO[0;39m Mapped "{[/restrict/info],methods=[POST],consumes=[multipart/form-data]}" onto public org.springframework.http.ResponseEntity<?> com.api.rep.rest.comandos.InfoRestController.receberInfo(org.springframework.web.multipart.MultipartFile) throws com.api.rep.service.ServiceException,java.io.IOException
+[2m2017-04-05 08:26:55.279[0;39m [32m INFO[0;39m Mapped "{[/home]}" onto public java.lang.String com.api.rep.rest.HomeController.irParaHome()
+[2m2017-04-05 08:26:55.283[0;39m [32m INFO[0;39m Mapped "{[/cadastro/rep],methods=[PUT],consumes=[application/json;charset=UTF-8]}" onto public org.springframework.http.ResponseEntity<com.api.rep.dto.comunicacao.RepDTO> com.api.rep.rest.rep.RepRestController.salvar(com.api.rep.dto.comunicacao.RepDTO) throws com.api.rep.service.ServiceException
+[2m2017-04-05 08:26:55.284[0;39m [32m INFO[0;39m Mapped "{[/cadastro/rep],methods=[GET],produces=[application/json;charset=UTF-8]}" onto public org.springframework.http.ResponseEntity<java.util.Collection<com.api.rep.dto.comunicacao.RepDTO>> com.api.rep.rest.rep.RepRestController.buscarTodos()
+[2m2017-04-05 08:26:55.284[0;39m [32m INFO[0;39m Mapped "{[/cadastro/rep/{id}],methods=[DELETE],consumes=[application/json;charset=UTF-8]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.api.rep.rest.rep.RepRestController.excluir(java.lang.Integer) throws com.api.rep.service.ServiceException
+[2m2017-04-05 08:26:55.285[0;39m [32m INFO[0;39m Mapped "{[/cadastro/rep/{numSerie}],methods=[GET],produces=[application/json;charset=UTF-8]}" onto public org.springframework.http.ResponseEntity<com.api.rep.dto.comunicacao.RepDTO> com.api.rep.rest.rep.RepRestController.buscar(java.lang.String) throws com.api.rep.service.ServiceException
+[2m2017-04-05 08:26:55.286[0;39m [32m INFO[0;39m Mapped "{[/cadastro/rep/{id}],methods=[GET],produces=[application/json;charset=UTF-8]}" onto public org.springframework.http.ResponseEntity<com.api.rep.dto.comunicacao.RepDTO> com.api.rep.rest.rep.RepRestController.buscar(java.lang.Integer)
+[2m2017-04-05 08:26:55.286[0;39m [32m INFO[0;39m Mapped "{[/cadastro/rep],methods=[POST],consumes=[application/json;charset=UTF-8]}" onto public org.springframework.http.ResponseEntity<com.api.rep.dto.comunicacao.RepDTO> com.api.rep.rest.rep.RepRestController.salvarRep(com.api.rep.dto.comunicacao.RepDTO) throws com.api.rep.service.ServiceException
+[2m2017-04-05 08:26:55.287[0;39m [32m INFO[0;39m Mapped "{[/cadastro/rep/monitoramento],methods=[GET],produces=[application/json;charset=UTF-8]}" onto public org.springframework.http.ResponseEntity<java.util.Collection<com.api.rep.dto.RepMonitor>> com.api.rep.rest.rep.RepRestController.buscarRepMonitoramento()
+[2m2017-04-05 08:26:55.291[0;39m [32m INFO[0;39m Mapped "{[/restrict/status],methods=[POST],consumes=[multipart/form-data],produces=[application/json;charset=UTF-8]}" onto public org.springframework.http.ResponseEntity<?> com.api.rep.rest.status.StatusRestController.status(org.springframework.web.multipart.MultipartFile) throws com.api.rep.service.ServiceException,java.io.IOException
+[2m2017-04-05 08:26:55.291[0;39m [32m INFO[0;39m Mapped "{[/tarefas],methods=[GET],produces=[application/json;charset=UTF-8]}" onto public org.springframework.http.ResponseEntity<?> com.api.rep.rest.status.StatusRestController.listar() throws com.api.rep.service.ServiceException,com.fasterxml.jackson.core.JsonProcessingException
+[2m2017-04-05 08:26:55.292[0;39m [32m INFO[0;39m Mapped "{[/restrict/status],methods=[PUT],consumes=[application/json;charset=UTF-8]}" onto public org.springframework.http.ResponseEntity<?> com.api.rep.rest.status.StatusRestController.respostaRep(com.api.rep.dto.comunicacao.RespostaRepDTO) throws com.api.rep.service.ServiceException,com.fasterxml.jackson.core.JsonProcessingException
+[2m2017-04-05 08:26:55.294[0;39m [32m INFO[0;39m Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[2m2017-04-05 08:26:55.295[0;39m [32m INFO[0;39m Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[2m2017-04-05 08:26:55.374[0;39m [32m INFO[0;39m Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2m2017-04-05 08:26:55.375[0;39m [32m INFO[0;39m Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2m2017-04-05 08:26:55.413[0;39m [32m INFO[0;39m Detected @ExceptionHandler methods in controllerException
+[2m2017-04-05 08:26:55.465[0;39m [32m INFO[0;39m Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2m2017-04-05 08:26:55.554[0;39m [32m INFO[0;39m Adding welcome page: class path resource [static/index.html]
+[2m2017-04-05 08:26:56.694[0;39m [32m INFO[0;39m LiveReload server is running on port 35729
+[2m2017-04-05 08:26:56.906[0;39m [32m INFO[0;39m Registering beans for JMX exposure on startup
+[2m2017-04-05 08:26:56.930[0;39m [32m INFO[0;39m No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+[2m2017-04-05 08:26:57.288[0;39m [32m INFO[0;39m Tomcat started on port(s): 443 (https) 80 (http)
+[2m2017-04-05 08:26:57.302[0;39m [32m INFO[0;39m Started RepApiApplication in 11.786 seconds (JVM running for 12.654)
+[2m2017-04-05 08:26:58.288[0;39m [32m INFO[0;39m Initializing Spring FrameworkServlet 'dispatcherServlet'
+[2m2017-04-05 08:26:58.288[0;39m [32m INFO[0;39m FrameworkServlet 'dispatcherServlet': initialization started
+[2m2017-04-05 08:26:58.319[0;39m [32m INFO[0;39m FrameworkServlet 'dispatcherServlet': initialization completed in 31 ms
+[2m2017-04-05 08:26:58.359[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:26:58.359[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:26:58.359[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:26:58.359[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:26:58.527[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:26:58.761[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:26:58.770[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:26:58.770[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:27:00.475[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:27:00.475[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:27:00.476[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:27:00.476[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:27:00.521[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:27:00.614[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:27:00.617[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:27:00.617[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:27:02.375[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:27:02.375[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:27:02.375[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:27:02.376[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:27:02.407[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:27:02.488[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:27:02.492[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:27:02.492[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:27:04.173[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:27:04.173[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:27:04.173[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:27:04.173[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:27:04.185[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:27:04.261[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:27:04.264[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:27:04.264[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:27:05.974[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:27:05.974[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:27:05.974[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:27:05.974[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:27:05.989[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:27:06.066[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:27:06.069[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:27:06.069[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:27:07.775[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:27:07.775[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:27:07.775[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:27:07.776[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:27:07.800[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:27:07.870[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:27:07.873[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:27:07.873[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:27:09.574[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:27:09.575[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:27:09.575[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:27:09.575[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:27:09.599[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:27:09.674[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:27:09.676[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:27:09.676[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:27:11.375[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:27:11.375[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:27:11.375[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:27:11.375[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:27:11.382[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:27:11.425[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:27:11.428[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:27:11.428[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:27:13.176[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:27:13.176[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:27:13.176[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:27:13.177[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:27:13.198[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:27:13.266[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:27:13.269[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:27:13.269[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:27:14.976[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:27:14.976[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:27:14.976[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:27:14.976[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:27:14.999[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:27:15.072[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:27:15.077[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:27:15.077[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:27:16.776[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:27:16.776[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:27:16.776[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:27:16.777[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:27:16.798[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:27:16.855[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:27:16.857[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:27:16.857[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:27:18.630[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:27:18.630[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:27:18.630[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:27:18.630[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:27:18.649[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:27:18.720[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:27:18.724[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:27:18.724[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:27:20.476[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:27:20.477[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:27:20.477[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:27:20.477[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:27:20.503[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:27:20.564[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:27:20.567[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:27:20.567[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:27:22.275[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:27:22.275[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:27:22.275[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:27:22.275[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:27:22.286[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:27:22.345[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:27:22.347[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:27:22.347[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:27:24.075[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:27:24.075[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:27:24.076[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:27:24.076[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:27:24.084[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:27:24.144[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:27:24.147[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:27:24.147[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:27:25.876[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:27:25.876[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:27:25.876[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:27:25.876[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:27:25.896[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:27:25.972[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:27:25.977[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:27:25.977[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:27:27.679[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:27:27.679[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:27:27.679[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:27:27.680[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:27:27.696[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:27:27.816[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:27:27.819[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:27:27.820[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:27:29.476[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:27:29.477[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:27:29.477[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:27:29.477[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:27:29.503[0;39m [33m WARN[0;39m Resolved exception caused by Handler execution: com.api.rep.service.ServiceException: Token inválido
+[2m2017-04-05 08:27:32.721[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:27:32.722[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:27:32.722[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:27:32.723[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/auth
+[2m2017-04-05 08:27:32.762[0;39m [32m INFO[0;39m Rep número de Série : 12345678901234567
+[2m2017-04-05 08:27:32.772[0;39m [32m INFO[0;39m Número randomico gerado pelo servidor : 4062345422637403134
+[2m2017-04-05 08:27:32.883[0;39m [32m INFO[0;39m Chave Pub RSA : [180, 11, 74, 115, 1, 251, 108, 113, 28, 65, 147, 176, 162, 229, 128, 14, 1, 241, 146, 181, 244, 20, 197, 42, 133, 53, 221, 193, 172, 245, 250, 173, 18, 4, 140, 82, 241, 112, 16, 211, 109, 81, 156, 4, 157, 46, 196, 79, 159, 223, 133, 128, 15, 80, 177, 195, 156, 101, 28, 206, 251, 126, 51, 248, 172, 157, 146, 38, 162, 146, 24, 179, 238, 232, 112, 179, 177, 142, 145, 163, 207, 248, 233, 200, 255, 246, 195, 95, 164, 106, 239, 108, 149, 92, 185, 11, 214, 127, 143, 89, 216, 99, 152, 26, 210, 174, 12, 215, 193, 28, 180, 34, 21, 20, 177, 107, 138, 189, 112, 102, 247, 201, 160, 220, 207, 186, 50, 199]
+[2m2017-04-05 08:27:33.357[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:27:33.358[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:27:33.358[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:27:33.358[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/auth/sign
+[2m2017-04-05 08:27:33.377[0;39m [32m INFO[0;39m Rep assinatura : 2E185C1937D72F6B99A29C58E76666D1B03795CC8253002CAEF55479FEC938118DACAFB3178AFEC3B0B1F395A57F8D71CB0E41739850E2CB26E2A8EE5FB3C2F1
+[2m2017-04-05 08:27:33.418[0;39m [32m INFO[0;39m Token criado : eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxMjM0NTY3ODkwMTIzNDU2NyIsImV4cCI6MTQ5MTM5MTcxM30.V45WkpsROf8A98MwCgoZYwjYcsFrmFDQDaTnlxFUubM
+[2m2017-04-05 08:27:33.418[0;39m [32m INFO[0;39m chave pública  : CA76020C2197CC99674C8C8C3492A2D8ABE95FEADC9F84C2B0BA45656BFC73EABD31BEF4797F5D19B7F3D107517B791705AE03EF72B025A356C6BD69BBD46AB2
+[2m2017-04-05 08:27:33.638[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:27:33.638[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:27:33.638[0;39m [32m INFO[0;39m Método  : PUT
+[2m2017-04-05 08:27:33.638[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:27:33.645[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:27:33.659[0;39m [32m INFO[0;39m Resposta Rep NSU : null
+[2m2017-04-05 08:27:33.660[0;39m [32m INFO[0;39m Resposta Rep Status : HTTPC_RESULT_OK
+[2m2017-04-05 08:27:35.377[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:27:35.377[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:27:35.377[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:27:35.378[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:27:35.398[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:27:35.475[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:27:35.478[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:27:35.478[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:27:37.177[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:27:37.178[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:27:37.178[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:27:37.178[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:27:37.199[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:27:37.275[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:27:37.278[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:27:37.278[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:27:38.978[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:27:38.978[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:27:38.978[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:27:38.978[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:27:39.001[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:27:39.111[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:27:39.114[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:27:39.114[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:27:40.778[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:27:40.778[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:27:40.778[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:27:40.778[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:27:40.801[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:27:40.879[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:27:40.882[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:27:40.882[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:27:42.634[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:27:42.634[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:27:42.634[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:27:42.634[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:27:42.655[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:27:42.730[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:27:42.734[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:27:42.735[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:27:44.477[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:27:44.478[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:27:44.478[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:27:44.478[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:27:44.498[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:27:44.563[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:27:44.567[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:27:44.567[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:27:46.277[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:27:46.277[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:27:46.278[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:27:46.278[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:27:46.284[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:27:46.347[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:27:46.349[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:27:46.349[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:27:48.078[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:27:48.078[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:27:48.078[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:27:48.078[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:27:48.099[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:27:48.162[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:27:48.165[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:27:48.165[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:27:49.878[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:27:49.879[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:27:49.879[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:27:49.879[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:27:49.897[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:27:49.962[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:27:49.966[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:27:49.966[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:27:51.678[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:27:51.678[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:27:51.679[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:27:51.679[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:27:51.697[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:27:51.761[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:27:51.763[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:27:51.763[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:27:53.479[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:27:53.479[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:27:53.479[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:27:53.479[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:27:53.496[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:27:53.578[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:27:53.584[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:27:53.584[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:27:55.279[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:27:55.279[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:27:55.279[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:27:55.279[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:27:55.299[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:27:55.359[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:27:55.362[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:27:55.362[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:27:57.078[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:27:57.078[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:27:57.078[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:27:57.078[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:27:57.084[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:27:57.138[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:27:57.142[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:27:57.142[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:27:58.880[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:27:58.880[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:27:58.880[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:27:58.880[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:27:58.900[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:27:58.986[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:27:58.990[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:27:58.990[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:28:00.725[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:28:00.726[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:28:00.726[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:28:00.726[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:28:00.746[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:28:00.796[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:28:00.801[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:28:00.801[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:28:02.479[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:28:02.479[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:28:02.479[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:28:02.480[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:28:02.516[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:28:02.600[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:28:02.602[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:28:02.602[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:28:04.379[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:28:04.380[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:28:04.380[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:28:04.380[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:28:04.398[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:28:04.448[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:28:04.451[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:28:04.451[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:28:06.180[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:28:06.180[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:28:06.180[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:28:06.180[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:28:06.203[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:28:06.264[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:28:06.267[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:28:06.267[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:28:07.979[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:28:07.979[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:28:07.979[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:28:07.980[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:28:07.986[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:28:08.032[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:28:08.035[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:28:08.035[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:28:09.780[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:28:09.780[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:28:09.780[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:28:09.780[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:28:09.791[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:28:09.851[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:28:09.853[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:28:09.854[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:28:11.580[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:28:11.580[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:28:11.580[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:28:11.580[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:28:11.591[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:28:11.645[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:28:11.647[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:28:11.647[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:28:13.380[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:28:13.380[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:28:13.380[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:28:13.380[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:28:13.387[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:28:13.434[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:28:13.436[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:28:13.436[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:28:15.180[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:28:15.181[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:28:15.181[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:28:15.181[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:28:15.204[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:28:15.275[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:28:15.277[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:28:15.277[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:28:16.980[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:28:16.981[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:28:16.981[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:28:16.981[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:28:16.990[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:28:17.090[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:28:17.093[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:28:17.093[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:28:18.780[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:28:18.780[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:28:18.780[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:28:18.780[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:28:18.789[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:28:18.857[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:28:18.861[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:28:18.862[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:28:20.633[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:28:20.634[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:28:20.634[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:28:20.634[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:28:20.649[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:28:20.715[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:28:20.720[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:28:20.720[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:28:22.381[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:28:22.382[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:28:22.382[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:28:22.382[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:28:22.397[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:28:22.453[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:28:22.455[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:28:22.455[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:28:24.180[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:28:24.180[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:28:24.180[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:28:24.180[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:28:24.190[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:28:24.249[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:28:24.252[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:28:24.252[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:28:25.981[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:28:25.981[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:28:25.981[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:28:25.981[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:28:25.985[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:28:26.029[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:28:26.030[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:28:26.030[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:28:27.781[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:28:27.781[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:28:27.781[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:28:27.781[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:28:27.787[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:28:27.832[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:28:27.834[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:28:27.834[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:28:29.637[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:28:29.637[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:28:29.637[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:28:29.637[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:28:29.651[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:28:29.722[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:28:29.723[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:28:29.723[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:28:31.381[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:28:31.382[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:28:31.382[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:28:31.382[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:28:31.396[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:28:31.458[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:28:31.462[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:28:31.462[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:28:33.181[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:28:33.182[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:28:33.182[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:28:33.182[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:28:33.194[0;39m [33m WARN[0;39m Resolved exception caused by Handler execution: com.api.rep.service.ServiceException: Token inválido
+[2m2017-04-05 08:28:36.327[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:28:36.327[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:28:36.327[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:28:36.327[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/auth
+[2m2017-04-05 08:28:36.345[0;39m [32m INFO[0;39m Rep número de Série : 12345678901234567
+[2m2017-04-05 08:28:36.357[0;39m [32m INFO[0;39m Número randomico gerado pelo servidor : 3986586967453122262
+[2m2017-04-05 08:28:36.469[0;39m [32m INFO[0;39m Chave Pub RSA : [131, 97, 136, 87, 131, 31, 70, 175, 220, 32, 208, 119, 69, 126, 217, 26, 253, 5, 127, 129, 135, 148, 244, 195, 44, 145, 80, 177, 175, 91, 55, 201, 39, 20, 114, 113, 170, 34, 99, 9, 75, 76, 211, 248, 230, 229, 201, 158, 222, 50, 207, 105, 102, 15, 56, 250, 84, 142, 185, 194, 245, 195, 13, 160, 113, 93, 80, 77, 233, 79, 66, 83, 25, 244, 205, 39, 76, 252, 17, 208, 34, 63, 140, 67, 25, 30, 98, 197, 217, 192, 109, 223, 175, 128, 159, 121, 70, 131, 136, 43, 34, 10, 174, 37, 69, 155, 216, 211, 138, 71, 209, 99, 56, 94, 89, 237, 186, 183, 198, 32, 154, 20, 102, 192, 220, 237, 54, 81]
+[2m2017-04-05 08:28:36.991[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:28:36.991[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:28:36.991[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:28:36.991[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/auth/sign
+[2m2017-04-05 08:28:37.011[0;39m [32m INFO[0;39m Rep assinatura : 4FAAB86D7334890260D8AD235A06F3C8B66B9C84BAD3F1F2792EEE921E68023C04B53F7EBEFECCC5FAE480B4F7FDEACA0181ABED3D3741830A550B5FFD1FF77D
+[2m2017-04-05 08:28:37.022[0;39m [32m INFO[0;39m Token criado : eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxMjM0NTY3ODkwMTIzNDU2NyIsImV4cCI6MTQ5MTM5MTc3N30.yXgrtFUM4Me6chQRVhA7NHf9doVznTWNyMCqGOi7KmI
+[2m2017-04-05 08:28:37.022[0;39m [32m INFO[0;39m chave pública  : CA76020C2197CC99674C8C8C3492A2D8ABE95FEADC9F84C2B0BA45656BFC73EABD31BEF4797F5D19B7F3D107517B791705AE03EF72B025A356C6BD69BBD46AB2
+[2m2017-04-05 08:28:37.201[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:28:37.201[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:28:37.201[0;39m [32m INFO[0;39m Método  : PUT
+[2m2017-04-05 08:28:37.202[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:28:37.217[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:28:37.220[0;39m [32m INFO[0;39m Resposta Rep NSU : null
+[2m2017-04-05 08:28:37.221[0;39m [32m INFO[0;39m Resposta Rep Status : HTTPC_RESULT_OK
+[2m2017-04-05 08:28:38.982[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:28:38.982[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:28:38.982[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:28:38.982[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:28:38.992[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:28:39.044[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:28:39.046[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:28:39.046[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:28:40.782[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:28:40.783[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:28:40.783[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:28:40.783[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:28:40.797[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:28:40.866[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:28:40.868[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:28:40.868[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:28:42.637[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:28:42.637[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:28:42.637[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:28:42.637[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:28:42.644[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:28:42.686[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:28:42.688[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:28:42.688[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:28:44.382[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:28:44.382[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:28:44.382[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:28:44.382[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:28:44.389[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:28:44.435[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:28:44.438[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:28:44.439[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:28:46.183[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:28:46.183[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:28:46.183[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:28:46.183[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:28:46.187[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:28:46.251[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:28:46.253[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:28:46.253[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:28:47.983[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:28:47.983[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:28:47.983[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:28:47.983[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:28:47.988[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:28:48.027[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:28:48.028[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:28:48.028[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:28:49.784[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:28:49.784[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:28:49.784[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:28:49.785[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:28:49.806[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:28:49.862[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:28:49.865[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:28:49.865[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:28:51.628[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:28:51.629[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:28:51.629[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:28:51.629[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:28:51.644[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:28:51.714[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:28:51.717[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:28:51.717[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:28:53.384[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:28:53.385[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:28:53.385[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:28:53.385[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:28:53.393[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:28:53.448[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:28:53.450[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:28:53.450[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:28:55.194[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:28:55.194[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:28:55.195[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:28:55.195[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:28:55.210[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:28:55.281[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:28:55.285[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:28:55.285[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:28:56.985[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:28:56.985[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:28:56.985[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:28:56.985[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:28:56.994[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:28:57.057[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:28:57.060[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:28:57.060[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:28:58.785[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:28:58.785[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:28:58.785[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:28:58.785[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:28:58.799[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:28:58.874[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:28:58.877[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:28:58.877[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:29:00.584[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:29:00.584[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:29:00.584[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:29:00.584[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:29:00.590[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:29:00.648[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:29:00.650[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:29:00.650[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:29:02.387[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:29:02.387[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:29:02.387[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:29:02.387[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:29:02.395[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:29:02.452[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:29:02.456[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:29:02.456[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:29:04.284[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:29:04.284[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:29:04.284[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:29:04.284[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:29:04.291[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:29:04.366[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:29:04.368[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:29:04.368[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:29:06.084[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:29:06.084[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:29:06.084[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:29:06.084[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:29:06.091[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:29:06.169[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:29:06.171[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:29:06.171[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:29:07.886[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:29:07.886[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:29:07.886[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:29:07.886[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:29:07.892[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:29:07.957[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:29:07.959[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:29:07.959[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:29:09.740[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:29:09.740[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:29:09.741[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:29:09.741[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:29:09.758[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:29:09.821[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:29:09.824[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:29:09.824[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:29:11.485[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:29:11.486[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:29:11.486[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:29:11.486[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:29:11.499[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:29:11.621[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:29:11.624[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:29:11.624[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:29:13.386[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:29:13.387[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:29:13.387[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:29:13.387[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:29:13.403[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:29:13.461[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:29:13.463[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:29:13.463[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:29:15.187[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:29:15.187[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:29:15.187[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:29:15.187[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:29:15.211[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:29:15.279[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:29:15.281[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:29:15.281[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:29:16.986[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:29:16.987[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:29:16.987[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:29:16.987[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:29:17.000[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:29:17.062[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:29:17.066[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:29:17.066[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:29:18.786[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:29:18.787[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:29:18.787[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:29:18.787[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:29:18.800[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:29:18.859[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:29:18.862[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:29:18.862[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:29:20.636[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:29:20.637[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:29:20.637[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:29:20.637[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:29:20.651[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:29:20.723[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:29:20.725[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:29:20.725[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:29:22.386[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:29:22.386[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:29:22.387[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:29:22.387[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:29:22.398[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:29:22.459[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:29:22.465[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:29:22.465[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:29:24.187[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:29:24.188[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:29:24.188[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:29:24.188[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:29:24.196[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:29:24.285[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:29:24.291[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:29:24.291[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:29:25.987[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:29:25.987[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:29:25.987[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:29:25.987[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:29:25.997[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:29:26.056[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:29:26.058[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:29:26.058[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:29:27.788[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:29:27.788[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:29:27.788[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:29:27.789[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:29:27.801[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:29:27.865[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:29:27.872[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:29:27.872[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:29:29.640[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:29:29.640[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:29:29.640[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:29:29.640[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:29:29.654[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:29:29.717[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:29:29.720[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:29:29.720[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:29:31.388[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:29:31.388[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:29:31.388[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:29:31.388[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:29:31.393[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:29:31.441[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:29:31.444[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:29:31.444[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:29:33.188[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:29:33.188[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:29:33.188[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:29:33.188[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:29:33.192[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:29:33.227[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:29:33.228[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:29:33.228[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:29:34.889[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:29:34.889[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:29:34.889[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:29:34.889[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:29:34.901[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:29:34.985[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:29:34.990[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:29:34.991[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:29:36.698[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:29:36.698[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:29:36.699[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:29:36.699[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:29:36.710[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:29:36.762[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:29:36.764[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:29:36.764[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:29:38.490[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:29:38.490[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:29:38.490[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:29:38.490[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:29:38.498[0;39m [33m WARN[0;39m Resolved exception caused by Handler execution: com.api.rep.service.ServiceException: Token inválido
+[2m2017-04-05 08:29:41.677[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:29:41.677[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:29:41.677[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:29:41.677[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/auth
+[2m2017-04-05 08:29:41.696[0;39m [32m INFO[0;39m Rep número de Série : 12345678901234567
+[2m2017-04-05 08:29:41.708[0;39m [32m INFO[0;39m Número randomico gerado pelo servidor : 7993556570433238067
+[2m2017-04-05 08:29:41.820[0;39m [32m INFO[0;39m Chave Pub RSA : [191, 39, 229, 71, 217, 12, 52, 116, 189, 213, 44, 34, 108, 242, 88, 177, 173, 61, 205, 119, 88, 238, 38, 53, 144, 96, 195, 117, 205, 181, 57, 111, 93, 234, 140, 199, 32, 146, 32, 68, 138, 0, 56, 92, 175, 130, 70, 129, 24, 175, 3, 227, 84, 53, 186, 119, 253, 89, 105, 166, 154, 107, 103, 232, 183, 88, 64, 196, 35, 87, 64, 84, 102, 254, 140, 139, 86, 120, 71, 105, 178, 229, 7, 15, 68, 65, 17, 63, 197, 234, 164, 4, 109, 151, 30, 75, 71, 162, 193, 49, 118, 66, 20, 252, 199, 251, 242, 129, 136, 95, 2, 110, 17, 107, 215, 75, 74, 145, 205, 226, 23, 61, 74, 93, 41, 145, 126, 155]
+[2m2017-04-05 08:29:42.281[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:29:42.282[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:29:42.282[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:29:42.282[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/auth/sign
+[2m2017-04-05 08:29:42.300[0;39m [32m INFO[0;39m Rep assinatura : C780AF0BB5E5FEB255E780F967540BB800A4459C0011B3457478D8D46A3694EFE148C811A65795BB7CEE3265DCB3805B62969C3570F887EBE5FB06B3F22B9D1A
+[2m2017-04-05 08:29:42.312[0;39m [32m INFO[0;39m Token criado : eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxMjM0NTY3ODkwMTIzNDU2NyIsImV4cCI6MTQ5MTM5MTg0Mn0.JRyGZJOlBpFs6_b6JQGWKbFC-pC3aEF5h0ZiXETFq4o
+[2m2017-04-05 08:29:42.312[0;39m [32m INFO[0;39m chave pública  : CA76020C2197CC99674C8C8C3492A2D8ABE95FEADC9F84C2B0BA45656BFC73EABD31BEF4797F5D19B7F3D107517B791705AE03EF72B025A356C6BD69BBD46AB2
+[2m2017-04-05 08:29:42.463[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:29:42.463[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:29:42.463[0;39m [32m INFO[0;39m Método  : PUT
+[2m2017-04-05 08:29:42.463[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:29:42.467[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:29:42.483[0;39m [32m INFO[0;39m Resposta Rep NSU : null
+[2m2017-04-05 08:29:42.483[0;39m [32m INFO[0;39m Resposta Rep Status : HTTPC_RESULT_OK
+[2m2017-04-05 08:29:44.189[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:29:44.189[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:29:44.189[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:29:44.189[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:29:44.192[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:29:44.238[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:29:44.240[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:29:44.240[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:29:45.990[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:29:45.991[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:29:45.991[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:29:45.991[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:29:46.006[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:29:46.075[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:29:46.082[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:29:46.082[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:29:47.790[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:29:47.790[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:29:47.790[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:29:47.790[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:29:47.797[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:29:47.847[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:29:47.850[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:29:47.851[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:29:49.637[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:29:49.638[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:29:49.638[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:29:49.638[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:29:49.650[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:29:49.705[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:29:49.710[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:29:49.710[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:29:51.390[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:29:51.390[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:29:51.390[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:29:51.390[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:29:51.397[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:29:51.446[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:29:51.448[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:29:51.448[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:29:53.191[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:29:53.192[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:29:53.192[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:29:53.192[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:29:53.204[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:29:53.257[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:29:53.260[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:29:53.260[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:29:54.991[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:29:54.991[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:29:54.992[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:29:54.992[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:29:55.003[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:29:55.059[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:29:55.062[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:29:55.062[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:29:56.791[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:29:56.792[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:29:56.792[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:29:56.792[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:29:56.804[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:29:56.861[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:29:56.863[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:29:56.863[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:29:58.591[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:29:58.592[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:29:58.592[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:29:58.592[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:29:58.605[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:29:58.663[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:29:58.667[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:29:58.667[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:30:00.393[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:30:00.393[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:30:00.393[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:30:00.393[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:30:00.404[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:30:00.468[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:30:00.470[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:30:00.470[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:30:02.292[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:30:02.293[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:30:02.293[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:30:02.293[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:30:02.299[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:30:02.342[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:30:02.344[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:30:02.344[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:30:04.093[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:30:04.093[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:30:04.093[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:30:04.093[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:30:04.103[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:30:04.159[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:30:04.161[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:30:04.161[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:30:05.892[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:30:05.892[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:30:05.892[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:30:05.892[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:30:05.899[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:30:05.959[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:30:05.961[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:30:05.961[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:30:07.736[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:30:07.736[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:30:07.737[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:30:07.737[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:30:07.752[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:30:07.799[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:30:07.803[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:30:07.803[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:30:09.493[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:30:09.493[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:30:09.494[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:30:09.494[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:30:09.505[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:30:09.622[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:30:09.624[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:30:09.624[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:30:11.393[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:30:11.394[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:30:11.394[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:30:11.394[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:30:11.405[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:30:11.457[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:30:11.460[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:30:11.460[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:30:13.293[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:30:13.294[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:30:13.294[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:30:13.294[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:30:13.306[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:30:13.363[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:30:13.368[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:30:13.368[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:30:15.093[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:30:15.093[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:30:15.094[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:30:15.094[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:30:15.107[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:30:15.169[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:30:15.170[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:30:15.170[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:30:16.895[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:30:16.895[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:30:16.895[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:30:16.895[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:30:16.907[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:30:16.967[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:30:16.969[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:30:16.970[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:30:18.726[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:30:18.726[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:30:18.727[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:30:18.727[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:30:18.738[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:30:18.800[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:30:18.803[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:30:18.803[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:30:20.495[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:30:20.495[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:30:20.496[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:30:20.496[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:30:20.509[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:30:20.657[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:30:20.660[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:30:20.660[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:30:22.394[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:30:22.394[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:30:22.395[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:30:22.395[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:30:22.406[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:30:22.463[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:30:22.465[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:30:22.465[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:30:24.195[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:30:24.196[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:30:24.196[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:30:24.196[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:30:24.207[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:30:24.260[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:30:24.262[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:30:24.262[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:30:25.995[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:30:25.995[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:30:25.995[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:30:25.995[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:30:26.003[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:30:26.055[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:30:26.059[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:30:26.059[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:30:27.795[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:30:27.795[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:30:27.796[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:30:27.796[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:30:27.807[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:30:27.868[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:30:27.874[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:30:27.874[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:30:29.651[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:30:29.653[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:30:29.653[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:30:29.653[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:30:29.670[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:30:29.727[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:30:29.728[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:30:29.728[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:30:31.396[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:30:31.396[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:30:31.396[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:30:31.396[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:30:31.408[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:30:31.466[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:30:31.469[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:30:31.469[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:30:33.197[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:30:33.197[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:30:33.197[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:30:33.197[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:30:33.211[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:30:33.281[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:30:33.283[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:30:33.283[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:30:34.997[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:30:34.997[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:30:34.997[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:30:34.997[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:30:35.009[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:30:35.095[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:30:35.102[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:30:35.102[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:30:36.797[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:30:36.797[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:30:36.797[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:30:36.798[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:30:36.810[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:30:36.870[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:30:36.875[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:30:36.876[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:30:38.652[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:30:38.652[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:30:38.652[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:30:38.652[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:30:38.665[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:30:38.742[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:30:38.743[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:30:38.743[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:30:40.498[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:30:40.498[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:30:40.498[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:30:40.498[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:30:40.510[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:30:40.557[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:30:40.560[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:30:40.560[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:30:42.298[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:30:42.298[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:30:42.298[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:30:42.298[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:30:42.306[0;39m [33m WARN[0;39m Resolved exception caused by Handler execution: com.api.rep.service.ServiceException: Token inválido
+[2m2017-04-05 08:30:45.441[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:30:45.442[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:30:45.442[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:30:45.442[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/auth
+[2m2017-04-05 08:30:45.460[0;39m [32m INFO[0;39m Rep número de Série : 12345678901234567
+[2m2017-04-05 08:30:45.469[0;39m [32m INFO[0;39m Número randomico gerado pelo servidor : -7610633585375326685
+[2m2017-04-05 08:30:45.530[0;39m [32m INFO[0;39m Chave Pub RSA : [146, 111, 186, 253, 180, 63, 235, 196, 21, 138, 221, 215, 191, 38, 134, 123, 26, 216, 193, 131, 212, 242, 242, 215, 16, 28, 2, 221, 219, 145, 221, 194, 13, 162, 255, 3, 59, 141, 37, 68, 178, 67, 241, 172, 205, 229, 230, 34, 50, 224, 123, 218, 43, 69, 95, 62, 103, 54, 137, 183, 149, 198, 208, 29, 241, 242, 224, 192, 176, 54, 72, 69, 44, 232, 209, 69, 123, 128, 186, 166, 212, 14, 222, 248, 67, 68, 220, 77, 25, 55, 254, 95, 10, 112, 118, 236, 63, 104, 45, 139, 68, 114, 42, 44, 31, 195, 249, 214, 89, 140, 2, 78, 153, 113, 20, 243, 130, 184, 135, 147, 203, 104, 4, 50, 43, 188, 152, 175]
+[2m2017-04-05 08:30:46.033[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:30:46.033[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:30:46.033[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:30:46.034[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/auth/sign
+[2m2017-04-05 08:30:46.053[0;39m [32m INFO[0;39m Rep assinatura : 9BC565E7A0EE9E7B228B0E3708CC4C8E45697DF89674BA1846C18626B6C98DA039D65F252AC149F9B564A7DCA37F296B393E6576E0FF1513C27C97E7EE6DE348
+[2m2017-04-05 08:30:46.063[0;39m [32m INFO[0;39m Token criado : eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxMjM0NTY3ODkwMTIzNDU2NyIsImV4cCI6MTQ5MTM5MTkwNn0.UNGDxNdULwdBz7L87xPIoWZB8kqaz7S5zOiZ8OMHw_A
+[2m2017-04-05 08:30:46.063[0;39m [32m INFO[0;39m chave pública  : CA76020C2197CC99674C8C8C3492A2D8ABE95FEADC9F84C2B0BA45656BFC73EABD31BEF4797F5D19B7F3D107517B791705AE03EF72B025A356C6BD69BBD46AB2
+[2m2017-04-05 08:30:46.219[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:30:46.219[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:30:46.219[0;39m [32m INFO[0;39m Método  : PUT
+[2m2017-04-05 08:30:46.219[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:30:46.236[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:30:46.239[0;39m [32m INFO[0;39m Resposta Rep NSU : null
+[2m2017-04-05 08:30:46.239[0;39m [32m INFO[0;39m Resposta Rep Status : HTTPC_RESULT_OK
+[2m2017-04-05 08:30:47.999[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:30:47.999[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:30:47.999[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:30:47.999[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:30:48.012[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:30:48.076[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:30:48.081[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:30:48.081[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:30:49.798[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:30:49.798[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:30:49.798[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:30:49.798[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:30:49.804[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:30:49.846[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:30:49.848[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:30:49.848[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:30:51.654[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:30:51.654[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:30:51.655[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:30:51.655[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:30:51.666[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:30:51.722[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:30:51.724[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:30:51.724[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:30:53.399[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:30:53.399[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:30:53.399[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:30:53.399[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:30:53.441[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:30:53.517[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:30:53.519[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:30:53.519[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:30:55.300[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:30:55.301[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:30:55.301[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:30:55.301[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:30:55.317[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:30:55.365[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:30:55.368[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:30:55.368[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:30:57.100[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:30:57.101[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:30:57.101[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:30:57.101[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:30:57.114[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:30:57.178[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:30:57.179[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:30:57.179[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:30:58.900[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:30:58.901[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:30:58.901[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:30:58.901[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:30:58.913[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:30:58.983[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:30:58.987[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:30:58.987[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:31:00.700[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:31:00.700[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:31:00.701[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:31:00.701[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:31:00.711[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:31:00.781[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:31:00.783[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:31:00.784[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:31:02.501[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:31:02.501[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:31:02.501[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:31:02.502[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:31:02.512[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:31:02.704[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:31:02.709[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:31:02.709[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:31:04.401[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:31:04.401[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:31:04.401[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:31:04.401[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:31:04.415[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:31:04.476[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:31:04.477[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:31:04.477[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:31:06.202[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:31:06.202[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:31:06.202[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:31:06.202[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:31:06.213[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:31:06.319[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:31:06.322[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:31:06.322[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:31:08.002[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:31:08.002[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:31:08.002[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:31:08.002[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:31:08.015[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:31:08.065[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:31:08.068[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:31:08.068[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:31:09.801[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:31:09.802[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:31:09.802[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:31:09.802[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:31:09.814[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:31:09.887[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:31:09.890[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:31:09.890[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:31:11.653[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:31:11.653[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:31:11.653[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:31:11.653[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:31:11.670[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:31:11.728[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:31:11.731[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:31:11.731[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:31:13.402[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:31:13.403[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:31:13.403[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:31:13.403[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:31:13.414[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:31:13.468[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:31:13.470[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:31:13.470[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:31:15.302[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:31:15.302[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:31:15.302[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:31:15.302[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:31:15.306[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:31:15.352[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:31:15.355[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:31:15.355[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:31:17.103[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:31:17.103[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:31:17.103[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:31:17.104[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:31:17.114[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:31:17.180[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:31:17.185[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:31:17.185[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:31:18.903[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:31:18.903[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:31:18.904[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:31:18.904[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:31:18.914[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:31:18.978[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:31:18.982[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:31:18.983[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:31:20.747[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:31:20.747[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:31:20.748[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:31:20.748[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:31:20.759[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:31:20.823[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:31:20.826[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:31:20.826[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:31:22.503[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:31:22.503[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:31:22.504[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:31:22.504[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:31:22.514[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:31:22.574[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:31:22.579[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:31:22.579[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:31:24.303[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:31:24.303[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:31:24.303[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:31:24.303[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:31:24.309[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:31:24.365[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:31:24.384[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:31:24.384[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:31:26.104[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:31:26.104[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:31:26.105[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:31:26.105[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:31:26.115[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:31:26.176[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:31:26.179[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:31:26.179[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:31:27.904[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:31:27.904[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:31:27.905[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:31:27.905[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:31:27.915[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:31:27.981[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:31:27.983[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:31:27.983[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:31:29.738[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:31:29.738[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:31:29.738[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:31:29.738[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:31:29.749[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:31:29.802[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:31:29.805[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:31:29.806[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:31:31.504[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:31:31.504[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:31:31.505[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:31:31.505[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:31:31.515[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:31:31.574[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:31:31.577[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:31:31.577[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:31:33.305[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:31:33.305[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:31:33.306[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:31:33.306[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:31:33.309[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:31:33.350[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:31:33.352[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:31:33.352[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:31:35.105[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:31:35.105[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:31:35.105[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:31:35.105[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:31:35.116[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:31:35.171[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:31:35.174[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:31:35.174[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:31:36.905[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:31:36.906[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:31:36.906[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:31:36.906[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:31:36.917[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:31:36.980[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:31:36.982[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:31:36.982[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:31:38.725[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:31:38.726[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:31:38.726[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:31:38.726[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:31:38.739[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:31:38.810[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:31:38.812[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:31:38.812[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:31:40.506[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:31:40.507[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:31:40.507[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:31:40.507[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:31:40.517[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:31:40.572[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:31:40.575[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:31:40.575[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:31:42.306[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:31:42.306[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:31:42.306[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:31:42.306[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:31:42.311[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:31:42.361[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:31:42.363[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:31:42.364[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:31:44.106[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:31:44.106[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:31:44.106[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:31:44.106[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:31:44.114[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:31:44.171[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:31:44.173[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:31:44.173[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:31:45.906[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:31:45.906[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:31:45.907[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:31:45.907[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:31:45.917[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:31:46.015[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:31:46.017[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:31:46.017[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:31:47.712[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:31:47.712[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:31:47.713[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:31:47.713[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:31:47.719[0;39m [33m WARN[0;39m Resolved exception caused by Handler execution: com.api.rep.service.ServiceException: Token inválido
+[2m2017-04-05 08:31:50.856[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:31:50.856[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:31:50.856[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:31:50.856[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/auth
+[2m2017-04-05 08:31:50.874[0;39m [32m INFO[0;39m Rep número de Série : 12345678901234567
+[2m2017-04-05 08:31:50.883[0;39m [32m INFO[0;39m Número randomico gerado pelo servidor : 7944057156087832832
+[2m2017-04-05 08:31:50.958[0;39m [32m INFO[0;39m Chave Pub RSA : [153, 1, 102, 118, 41, 29, 153, 119, 69, 55, 14, 63, 190, 237, 83, 253, 122, 237, 116, 245, 210, 62, 91, 211, 58, 67, 179, 158, 202, 42, 189, 37, 45, 124, 105, 33, 187, 174, 155, 254, 158, 101, 28, 87, 82, 149, 96, 44, 189, 119, 231, 6, 243, 86, 70, 88, 181, 148, 51, 177, 133, 213, 166, 148, 156, 235, 20, 4, 29, 82, 209, 41, 93, 151, 72, 208, 11, 50, 97, 65, 77, 32, 60, 130, 118, 219, 252, 167, 41, 119, 106, 16, 28, 216, 221, 247, 82, 51, 17, 53, 246, 149, 67, 168, 127, 159, 198, 159, 178, 9, 77, 182, 45, 161, 153, 202, 99, 183, 197, 132, 103, 149, 83, 62, 215, 87, 138, 29]
+[2m2017-04-05 08:31:51.414[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:31:51.414[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:31:51.414[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:31:51.414[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/auth/sign
+[2m2017-04-05 08:31:51.433[0;39m [32m INFO[0;39m Rep assinatura : D979E4E91021DCFE488BAF1B75402BFDFA870CBD2603A89AEDABDD20FBEF4397D8507AC410894538958A600B930BA718FE9602FBEE73F2AF83170D90BA12AB6B
+[2m2017-04-05 08:31:51.443[0;39m [32m INFO[0;39m Token criado : eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxMjM0NTY3ODkwMTIzNDU2NyIsImV4cCI6MTQ5MTM5MTk3MX0.w98bJDbuZF_XE1CX84QM9v41TY-9v02EPPxay6VAfVU
+[2m2017-04-05 08:31:51.443[0;39m [32m INFO[0;39m chave pública  : CA76020C2197CC99674C8C8C3492A2D8ABE95FEADC9F84C2B0BA45656BFC73EABD31BEF4797F5D19B7F3D107517B791705AE03EF72B025A356C6BD69BBD46AB2
+[2m2017-04-05 08:31:51.663[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:31:51.663[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:31:51.663[0;39m [32m INFO[0;39m Método  : PUT
+[2m2017-04-05 08:31:51.663[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:31:51.671[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:31:51.681[0;39m [32m INFO[0;39m Resposta Rep NSU : null
+[2m2017-04-05 08:31:51.681[0;39m [32m INFO[0;39m Resposta Rep Status : HTTPC_RESULT_OK
+[2m2017-04-05 08:31:53.407[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:31:53.408[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:31:53.408[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:31:53.408[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:31:53.420[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:31:53.483[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:31:53.488[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:31:53.488[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:31:55.208[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:31:55.208[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:31:55.209[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:31:55.209[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:31:55.220[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:31:55.275[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:31:55.277[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:31:55.277[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:31:57.008[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:31:57.008[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:31:57.008[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:31:57.008[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:31:57.014[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:31:57.051[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:31:57.053[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:31:57.053[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:31:58.808[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:31:58.809[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:31:58.809[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:31:58.809[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:31:58.821[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:31:58.895[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:31:58.898[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:31:58.898[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:32:00.661[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:32:00.661[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:32:00.661[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:32:00.662[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:32:00.672[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:32:00.735[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:32:00.736[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:32:00.736[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:32:02.408[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:32:02.408[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:32:02.408[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:32:02.408[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:32:02.414[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:32:02.512[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:32:02.514[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:32:02.514[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:32:04.309[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:32:04.309[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:32:04.310[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:32:04.310[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:32:04.320[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:32:04.375[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:32:04.379[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:32:04.379[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:32:06.109[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:32:06.109[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:32:06.109[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:32:06.109[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:32:06.122[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:32:06.181[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:32:06.185[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:32:06.185[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:32:07.909[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:32:07.909[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:32:07.909[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:32:07.910[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:32:07.916[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:32:07.955[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:32:07.956[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:32:07.957[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:32:09.710[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:32:09.711[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:32:09.711[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:32:09.711[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:32:09.723[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:32:09.773[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:32:09.775[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:32:09.775[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:32:11.511[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:32:11.511[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:32:11.511[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:32:11.511[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:32:11.524[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:32:11.665[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:32:11.668[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:32:11.668[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:32:13.410[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:32:13.411[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:32:13.411[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:32:13.411[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:32:13.422[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:32:13.496[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:32:13.497[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:32:13.498[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:32:15.310[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:32:15.310[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:32:15.310[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:32:15.310[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:32:15.314[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:32:15.370[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:32:15.372[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:32:15.372[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:32:17.110[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:32:17.110[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:32:17.110[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:32:17.110[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:32:17.114[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:32:17.171[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:32:17.172[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:32:17.172[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:32:18.911[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:32:18.911[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:32:18.912[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:32:18.912[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:32:18.922[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:32:18.996[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:32:18.998[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:32:18.998[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:32:20.761[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:32:20.761[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:32:20.762[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:32:20.762[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:32:20.772[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:32:20.838[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:32:20.841[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:32:20.841[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:32:22.511[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:32:22.511[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:32:22.512[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:32:22.512[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:32:22.523[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:32:22.583[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:32:22.587[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:32:22.587[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:32:24.311[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:32:24.312[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:32:24.312[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:32:24.312[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:32:24.316[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:32:24.360[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:32:24.361[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:32:24.361[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:32:26.112[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:32:26.112[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:32:26.112[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:32:26.112[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:32:26.123[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:32:26.186[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:32:26.188[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:32:26.188[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:32:27.912[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:32:27.912[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:32:27.913[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:32:27.913[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:32:27.923[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:32:27.988[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:32:27.990[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:32:27.990[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:32:29.755[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:32:29.755[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:32:29.755[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:32:29.755[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:32:29.758[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:32:29.818[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:32:29.821[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:32:29.821[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:32:31.512[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:32:31.512[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:32:31.512[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:32:31.512[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:32:31.523[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:32:31.583[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:32:31.588[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:32:31.588[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:32:33.312[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:32:33.312[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:32:33.313[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:32:33.313[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:32:33.325[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:32:33.372[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:32:33.374[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:32:33.374[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:32:35.113[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:32:35.114[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:32:35.114[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:32:35.114[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:32:35.126[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:32:35.173[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:32:35.176[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:32:35.176[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:32:36.913[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:32:36.914[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:32:36.914[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:32:36.914[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:32:36.925[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:32:36.979[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:32:36.982[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:32:36.982[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:32:38.744[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:32:38.744[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:32:38.744[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:32:38.744[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:32:38.747[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:32:38.786[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:32:38.788[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:32:38.788[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:32:40.513[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:32:40.513[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:32:40.514[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:32:40.514[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:32:40.524[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:32:40.587[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:32:40.589[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:32:40.589[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:32:42.314[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:32:42.315[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:32:42.315[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:32:42.315[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:32:42.326[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:32:42.388[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:32:42.390[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:32:42.390[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:32:44.115[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:32:44.115[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:32:44.115[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:32:44.115[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:32:44.121[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:32:44.179[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:32:44.181[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:32:44.181[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:32:45.915[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:32:45.916[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:32:45.916[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:32:45.916[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:32:45.929[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:32:46.002[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:32:46.006[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:32:46.007[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:32:47.730[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:32:47.730[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:32:47.730[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:32:47.730[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:32:47.737[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:32:47.781[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:32:47.786[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:32:47.786[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:32:49.515[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:32:49.515[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:32:49.515[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:32:49.515[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:32:49.519[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:32:49.556[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:32:49.558[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:32:49.558[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:32:51.315[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:32:51.315[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:32:51.316[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:32:51.316[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:32:51.325[0;39m [33m WARN[0;39m Resolved exception caused by Handler execution: com.api.rep.service.ServiceException: Token inválido
+[2m2017-04-05 08:32:54.459[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:32:54.459[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:32:54.459[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:32:54.459[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/auth
+[2m2017-04-05 08:32:54.479[0;39m [32m INFO[0;39m Rep número de Série : 12345678901234567
+[2m2017-04-05 08:32:54.487[0;39m [32m INFO[0;39m Número randomico gerado pelo servidor : -6555632378603882551
+[2m2017-04-05 08:32:54.564[0;39m [32m INFO[0;39m Chave Pub RSA : [176, 152, 10, 50, 0, 47, 155, 141, 66, 171, 116, 42, 148, 247, 243, 159, 236, 113, 123, 218, 190, 24, 96, 17, 109, 145, 92, 151, 2, 27, 191, 151, 60, 199, 165, 248, 77, 237, 241, 254, 13, 152, 231, 42, 208, 16, 227, 237, 238, 250, 26, 102, 28, 12, 107, 239, 113, 103, 178, 232, 36, 146, 133, 120, 3, 107, 240, 247, 4, 239, 127, 209, 93, 224, 206, 115, 38, 192, 175, 92, 200, 83, 32, 104, 9, 223, 241, 66, 229, 116, 252, 86, 232, 223, 132, 252, 31, 157, 248, 255, 114, 82, 231, 207, 168, 204, 198, 192, 26, 150, 68, 148, 109, 100, 153, 202, 192, 99, 30, 210, 0, 150, 23, 123, 99, 154, 234, 33]
+[2m2017-04-05 08:32:55.048[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:32:55.049[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:32:55.049[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:32:55.049[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/auth/sign
+[2m2017-04-05 08:32:55.067[0;39m [32m INFO[0;39m Rep assinatura : 69791CBDA64AA1B4988056AA54D233244AA27F8469E808C89D6D3F4500E09988AE32EE7CCF3F98E8BF4DCB736690FA183AA5A1F5BE2C567502FA18B07B08087B
+[2m2017-04-05 08:32:55.076[0;39m [32m INFO[0;39m Token criado : eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxMjM0NTY3ODkwMTIzNDU2NyIsImV4cCI6MTQ5MTM5MjAzNX0.7buSZNmWE2l56TRZPrc-suna8VxbUjTh6UOAaIUJJwc
+[2m2017-04-05 08:32:55.076[0;39m [32m INFO[0;39m chave pública  : CA76020C2197CC99674C8C8C3492A2D8ABE95FEADC9F84C2B0BA45656BFC73EABD31BEF4797F5D19B7F3D107517B791705AE03EF72B025A356C6BD69BBD46AB2
+[2m2017-04-05 08:32:55.245[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:32:55.245[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:32:55.245[0;39m [32m INFO[0;39m Método  : PUT
+[2m2017-04-05 08:32:55.245[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:32:55.256[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:32:55.264[0;39m [32m INFO[0;39m Resposta Rep NSU : null
+[2m2017-04-05 08:32:55.264[0;39m [32m INFO[0;39m Resposta Rep Status : HTTPC_RESULT_OK
+[2m2017-04-05 08:32:57.016[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:32:57.016[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:32:57.016[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:32:57.016[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:32:57.020[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:32:57.067[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:32:57.069[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:32:57.069[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:32:58.816[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:32:58.818[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:32:58.818[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:32:58.818[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:32:58.828[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:32:58.890[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:32:58.894[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:32:58.894[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:33:00.666[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:33:00.666[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:33:00.666[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:33:00.667[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:33:00.677[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:33:00.741[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:33:00.747[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:33:00.747[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:33:02.417[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:33:02.417[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:33:02.417[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:33:02.417[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:33:02.427[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:33:02.482[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:33:02.487[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:33:02.487[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:33:04.219[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:33:04.219[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:33:04.219[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:33:04.219[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:33:04.235[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:33:04.283[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:33:04.285[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:33:04.285[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:33:06.018[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:33:06.018[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:33:06.018[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:33:06.018[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:33:06.024[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:33:06.079[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:33:06.085[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:33:06.085[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:33:07.818[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:33:07.819[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:33:07.819[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:33:07.819[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:33:07.830[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:33:07.883[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:33:07.885[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:33:07.885[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:33:09.669[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:33:09.669[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:33:09.670[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:33:09.670[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:33:09.681[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:33:09.739[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:33:09.745[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:33:09.745[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:33:11.418[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:33:11.419[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:33:11.419[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:33:11.419[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:33:11.429[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:33:11.486[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:33:11.490[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:33:11.490[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:33:13.319[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:33:13.319[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:33:13.320[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:33:13.320[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:33:13.330[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:33:13.389[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:33:13.417[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:33:13.417[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:33:15.119[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:33:15.119[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:33:15.119[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:33:15.120[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:33:15.131[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:33:15.177[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:33:15.179[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:33:15.179[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:33:16.919[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:33:16.919[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:33:16.920[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:33:16.920[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:33:16.934[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:33:17.008[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:33:17.010[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:33:17.010[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:33:18.766[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:33:18.766[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:33:18.767[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:33:18.767[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:33:18.777[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:33:18.827[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:33:18.829[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:33:18.830[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:33:20.518[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:33:20.519[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:33:20.519[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:33:20.519[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:33:20.523[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:33:20.580[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:33:20.585[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:33:20.585[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:33:22.320[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:33:22.320[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:33:22.320[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:33:22.320[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:33:22.330[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:33:22.389[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:33:22.394[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:33:22.394[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:33:24.120[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:33:24.120[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:33:24.120[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:33:24.120[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:33:24.131[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:33:24.187[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:33:24.190[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:33:24.190[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:33:25.920[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:33:25.920[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:33:25.920[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:33:25.920[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:33:25.923[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:33:25.984[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:33:25.988[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:33:25.988[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:33:27.755[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:33:27.755[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:33:27.756[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:33:27.756[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:33:27.766[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:33:27.825[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:33:27.830[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:33:27.830[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:33:29.521[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:33:29.521[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:33:29.521[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:33:29.521[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:33:29.531[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:33:29.587[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:33:29.591[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:33:29.592[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:33:31.321[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:33:31.321[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:33:31.321[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:33:31.322[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:33:31.333[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:33:31.390[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:33:31.394[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:33:31.394[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:33:33.121[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:33:33.121[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:33:33.121[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:33:33.121[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:33:33.131[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:33:33.195[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:33:33.197[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:33:33.197[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:33:34.921[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:33:34.921[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:33:34.921[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:33:34.921[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:33:34.932[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:33:34.993[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:33:34.996[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:33:34.996[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:33:36.749[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:33:36.749[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:33:36.749[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:33:36.750[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:33:36.760[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:33:36.827[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:33:36.834[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:33:36.834[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:33:38.521[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:33:38.521[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:33:38.521[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:33:38.521[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:33:38.525[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:33:38.559[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:33:38.561[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:33:38.561[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:33:40.322[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:33:40.322[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:33:40.322[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:33:40.322[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:33:40.333[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:33:40.390[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:33:40.395[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:33:40.395[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:33:42.122[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:33:42.122[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:33:42.122[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:33:42.122[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:33:42.125[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:33:42.166[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:33:42.168[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:33:42.168[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:33:43.923[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:33:43.923[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:33:43.924[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:33:43.924[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:33:43.938[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:33:43.997[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:33:43.999[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:33:43.999[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:33:45.730[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:33:45.730[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:33:45.730[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:33:45.731[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:33:45.741[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:33:45.809[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:33:45.813[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:33:45.813[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:33:47.523[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:33:47.523[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:33:47.524[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:33:47.524[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:33:47.537[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:33:47.593[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:33:47.595[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:33:47.595[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:33:49.326[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:33:49.326[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:33:49.327[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:33:49.327[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:33:49.338[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:33:49.398[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:33:49.401[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:33:49.401[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:33:51.123[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:33:51.123[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:33:51.123[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:33:51.123[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:33:51.132[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:33:51.199[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:33:51.204[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:33:51.204[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:33:52.925[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:33:52.925[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:33:52.925[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:33:52.925[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:33:52.934[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:33:52.998[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:33:53.000[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:33:53.000[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:33:54.724[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:33:54.724[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:33:54.725[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:33:54.725[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:33:54.735[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:33:54.816[0;39m [32m INFO[0;39m Ultimo NSR 1358391
+[2m2017-04-05 08:33:54.818[0;39m [32m INFO[0;39m Sem pendencia
+[2m2017-04-05 08:33:54.819[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:33:56.524[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:33:56.524[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:33:56.524[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:33:56.524[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:33:56.528[0;39m [33m WARN[0;39m Resolved exception caused by Handler execution: com.api.rep.service.ServiceException: Token inválido
+[2m2017-04-05 08:33:59.787[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:33:59.787[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:33:59.787[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:33:59.787[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/auth
+[2m2017-04-05 08:33:59.807[0;39m [32m INFO[0;39m Rep número de Série : 12345678901234567
+[2m2017-04-05 08:33:59.810[0;39m [32m INFO[0;39m Número randomico gerado pelo servidor : -6760964339797010092
+[2m2017-04-05 08:33:59.850[0;39m [32m INFO[0;39m Chave Pub RSA : [165, 140, 228, 193, 194, 48, 129, 216, 21, 76, 169, 152, 62, 84, 163, 68, 230, 133, 141, 127, 180, 201, 49, 75, 30, 31, 111, 249, 157, 0, 179, 149, 81, 132, 147, 64, 86, 168, 137, 64, 129, 253, 21, 128, 91, 183, 91, 172, 123, 247, 64, 162, 215, 23, 142, 5, 51, 78, 192, 217, 187, 27, 59, 25, 182, 184, 98, 89, 34, 148, 105, 195, 38, 32, 241, 14, 175, 58, 109, 32, 29, 129, 62, 144, 56, 161, 254, 83, 231, 226, 145, 215, 6, 217, 28, 176, 204, 169, 18, 31, 50, 88, 253, 154, 55, 171, 46, 156, 118, 76, 60, 28, 254, 236, 76, 162, 246, 127, 118, 19, 21, 238, 48, 207, 212, 67, 222, 117]
+[2m2017-04-05 08:34:00.312[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:34:00.312[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:34:00.312[0;39m [32m INFO[0;39m Método  : POST
+[2m2017-04-05 08:34:00.312[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/auth/sign
+[2m2017-04-05 08:34:00.332[0;39m [32m INFO[0;39m Rep assinatura : 3B58075EC1E6B0EA3A5EF02B7E04BEFF7B30F4C6950A80CD43141E6FE4160FA49CB73A4FCE1095DA206FBDF4AFF9D454C172538829E1D5A1436BC87CB01B78E8
+[2m2017-04-05 08:34:00.334[0;39m [32m INFO[0;39m Token criado : eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxMjM0NTY3ODkwMTIzNDU2NyIsImV4cCI6MTQ5MTM5MjEwMH0.diIX5uGMqokRREZPruvQKZz4sWqfYE27aDxc10ftHSY
+[2m2017-04-05 08:34:00.334[0;39m [32m INFO[0;39m chave pública  : CA76020C2197CC99674C8C8C3492A2D8ABE95FEADC9F84C2B0BA45656BFC73EABD31BEF4797F5D19B7F3D107517B791705AE03EF72B025A356C6BD69BBD46AB2
+[2m2017-04-05 08:34:00.481[0;39m [32m INFO[0;39m ------------------------
+[2m2017-04-05 08:34:00.481[0;39m [32m INFO[0;39m Origem requisição IP : 10.0.23.118
+[2m2017-04-05 08:34:00.481[0;39m [32m INFO[0;39m Método  : PUT
+[2m2017-04-05 08:34:00.482[0;39m [32m INFO[0;39m URL  : http://alfa_gemini.topdata.com.br/restrict/status
+[2m2017-04-05 08:34:00.494[0;39m [32m INFO[0;39m Número Série Rep : 12345678901234567
+[2m2017-04-05 08:34:00.500[0;39m [32m INFO[0;39m Resposta Rep NSU : null
+[2m2017-04-05 08:34:00.500[0;39m [32m INFO[0;39m Resposta Rep Status : HTTPC_RESULT_OK
