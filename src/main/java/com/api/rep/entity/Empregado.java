@@ -228,7 +228,7 @@ public class Empregado implements Serializable {
 		dto.setfNome(empregadoNome);
 		dto.setfNEx(empregadoNomeExibe);
 		dto.setfPis(empregadoPis);
-		dto.setfPB(empregadoPossuiBio);
+		dto.setfPB(empregadoPossuiBio != null && empregadoPossuiBio == true ? "true" : "false");
 		dto.setfSenha(empregadoSenha);
 		return dto;
 	}

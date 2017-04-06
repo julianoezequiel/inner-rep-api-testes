@@ -57,37 +57,41 @@ public class StatusService extends ApiService {
 	 * @param rep
 	 * @return
 	 * @throws ServiceException
-	 * @throws IOException 
+	 * @throws IOException
 	 */
 	public byte[] validarStatus(HttpServletRequest request, MultipartFile dados, Rep rep)
 			throws ServiceException, IOException {
-		rep = this.getRepService().buscarPorNumeroSerie(rep);
-		
-		StatusDTO status = this.getMapper().readValue(this.getServiceUtils().dadosCripto(rep, dados),
-				StatusDTO.class);
+		try {
+			rep = this.getRepService().buscarPorNumeroSerie(rep);
 
-		rep = validarDadosEntrada(status, rep);
+			StatusDTO status = this.getMapper().readValue(this.getServiceUtils().dadosCripto(rep, dados),
+					StatusDTO.class);
 
-		atualizarStatus(rep, request);
+			rep = validarDadosEntrada(status, rep);
 
-		// agendamento auto das configuracoes
-		if (coletaConfig) {
-			this.configuracaoService.validarAlteracoesConfiguracoes(rep, status);
+			atualizarStatus(rep, request);
+
+			// agendamento auto das configuracoes
+			if (coletaConfig) {
+				this.configuracaoService.validarAlteracoesConfiguracoes(rep, status);
+			}
+			// agendamento auto da coleta
+			if (coletaAuto) {
+				this.tarefaService.agendarReceberColeta(rep, status);
+			}
+
+			// retorna a próxima Tarefa para o rep
+			String proximaTarefa = this.getMapper().writeValueAsString(proximaTarefa(rep));
+			// System.out.println(proximaTarefa);
+			byte[] proxTarefa = Utils.stringToByteM16(proximaTarefa);
+			// System.out.println("size " + proxTarefa.length);
+			byte[] cripto = this.getCriptoAES().cripto(rep.getChaveAES(), proxTarefa);
+			// System.out.println(Arrays.toString(cripto));
+			// System.out.println("size cripto " + cripto.length);
+			return cripto;
+		} catch (Exception e) {
+			throw new ServiceException(HttpStatus.UNAUTHORIZED);
 		}
-		// agendamento auto da coleta
-		if (coletaAuto) {
-			this.tarefaService.agendarReceberColeta(rep, status);
-		}
-
-		// retorna a próxima Tarefa para o rep
-		String proximaTarefa = this.getMapper().writeValueAsString(proximaTarefa(rep));
-		// System.out.println(proximaTarefa);
-		byte[] proxTarefa = Utils.stringToByteM16(proximaTarefa);
-//		System.out.println("size " + proxTarefa.length);
-		byte[] cripto = this.getCriptoAES().cripto(rep.getChaveAES(), proxTarefa);
-//		System.out.println(Arrays.toString(cripto));
-//		System.out.println("size cripto " + cripto.length);
-		return cripto;
 
 	}
 
@@ -161,51 +165,47 @@ public class StatusService extends ApiService {
 	 */
 	public RespostaSevidorDTO validarRespostaRep(RespostaRepDTO respostaRep, Rep repAutenticado)
 			throws ServiceException {
-		
+
 		RespostaSevidorDTO respostaSevidorDTO = new RespostaSevidorDTO();
-		try{
-		// se existe um NSU
-		if (respostaRep != null && respostaRep.getNSU() != null && !respostaRep.getStatus().isEmpty()) {
-			// busca o NSU
-			Rep rep = this.getRepService().buscarPorNumeroSerie(repAutenticado);
+		try {
+			// se existe um NSU
+			if (respostaRep != null && respostaRep.getNSU() != null && !respostaRep.getStatus().isEmpty()) {
+				// busca o NSU
+				Rep rep = this.getRepService().buscarPorNumeroSerie(repAutenticado);
 
-			if (rep != null) {
-				// Teste basico, verifica se existe um status ok na resposta do
-				// rep
-				Tarefa tarefa = this.getTarefaRepository().findOne(respostaRep.getNSU());
+				if (rep != null) {
+					// Teste basico, verifica se existe um status ok na resposta
+					// do
+					// rep
+					Tarefa tarefa = this.getTarefaRepository().findOne(respostaRep.getNSU());
 
-				if (respostaRep.getStatus().stream()
-						.anyMatch(r -> r != CONSTANTES.STATUS_COM_REP.HTTPC_RESULT_FALHA.ordinal())
-						|| tarefa.getTipoTarefa().equals(CmdHandler.TIPO_CMD.ATUALIZACAO_FW.ordinal())
-						|| tarefa.getTipoTarefa().equals(CmdHandler.TIPO_CMD.ATUALIZACAO_PAGINAS.ordinal())
-						|| tarefa.getTipoTarefa().equals(CmdHandler.TIPO_CMD.COLETA.ordinal())
-						|| tarefa.getTipoTarefa().equals(CmdHandler.TIPO_CMD.LISTA_BIO.ordinal())
-						|| (tarefa.getTentativas() != null && tarefa.getTentativas() > 3)) {
+					if (respostaRep.getStatus().stream()
+							.anyMatch(r -> r != CONSTANTES.STATUS_COM_REP.HTTPC_RESULT_FALHA.ordinal())) {
 
-					// se foi uma resposta de sucesso, excluir a Tarefa
-					if (tarefa != null) {
-						// salva o arquivo do dump da coleta
-						if (tarefa.getTipoTarefa().equals(CmdHandler.TIPO_CMD.COLETA_DUMPING.ordinal())) {
-							coletaService.salvarArquivoDumpEmDisco(tarefa.getId());
+						// se foi uma resposta de sucesso, excluir a Tarefa
+						if (tarefa != null) {
+							// salva o arquivo do dump da coleta
+							if (tarefa.getTipoTarefa().equals(CmdHandler.TIPO_CMD.COLETA_DUMPING.ordinal())) {
+								coletaService.salvarArquivoDumpEmDisco(tarefa.getId());
+							}
+
+							// Remove os vínculos
+							tarefa = Tarefa.clear(tarefa);
+							this.getTarefaRepository().save(tarefa);
+							this.getTarefaRepository().delete(tarefa);
+							respostaSevidorDTO.setHttpStatus(HttpStatus.OK);
+							LOGGER.info("Tarefa NSU : " + tarefa.getId() + " removida");
+
 						}
-
-						// Remove os vínculos
-						tarefa = Tarefa.clear(tarefa);
+					} else {
+						tarefa.setTentativas(tarefa.getTentativas() == null ? 0 : tarefa.getTentativas() + 1);
 						this.getTarefaRepository().save(tarefa);
-						this.getTarefaRepository().delete(tarefa);
-						respostaSevidorDTO.setHttpStatus(HttpStatus.OK);
-						LOGGER.info("Tarefa NSU : " + tarefa.getId() + " removida");
-
 					}
-				} else {
-					tarefa.setTentativas(tarefa.getTentativas() == null ? 0 : tarefa.getTentativas() + 1);
-					this.getTarefaRepository().save(tarefa);
-				}
 
-			} else {
-				respostaSevidorDTO.setHttpStatus(HttpStatus.UNAUTHORIZED);
+				} else {
+					respostaSevidorDTO.setHttpStatus(HttpStatus.UNAUTHORIZED);
+				}
 			}
-		}
 		} catch (Exception e) {
 			// TODO: handle exception
 		}

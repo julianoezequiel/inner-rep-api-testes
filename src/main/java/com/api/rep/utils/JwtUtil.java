@@ -45,7 +45,7 @@ public class JwtUtil {
 	public String generateToken(String serie) {
 		// TOKEN com 10 minuto de validade
 		return Jwts.builder().setSubject(serie).signWith(SignatureAlgorithm.HS256, CONSTANTES.AUTH_KEY)
-				.setExpiration(new Date(System.currentTimeMillis() + 60 * 1000 * 10)).compact();
+				.setExpiration(new Date(System.currentTimeMillis() + 60 * 1000 * 24)).compact();
 	}
 
 	public Rep extractToken(HttpServletRequest request) throws ServiceException {

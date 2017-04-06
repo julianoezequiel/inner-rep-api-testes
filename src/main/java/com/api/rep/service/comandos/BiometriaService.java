@@ -3,6 +3,7 @@ package com.api.rep.service.comandos;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 
@@ -54,11 +55,11 @@ public class BiometriaService extends ApiService {
 			try {
 				Tarefa tarefa = tarefas.iterator().next();
 				if (tarefa.getUsuarioBioId() != null) {
-					InputStream data = null;
-					data = entity.getInputStream();
+
+					InputStream data = entity.getInputStream();
 
 					byte[] template = this.getDecriptoAES().decript(repAutenticado.getChaveAES(),
-							IOUtils.toByteArray(data)); // getStringFromInputStream(data);
+							IOUtils.toByteArray(data));
 
 					usuarioBio = this.usuarioBioRepository.buscarPorPis(tarefa.getUsuarioBioId().getPis());
 					if (usuarioBio == null) {
@@ -123,15 +124,8 @@ public class BiometriaService extends ApiService {
 			if (tarefa.getUsuarioBioId() != null) {
 				usuarioBio = this.usuarioBioRepository.buscarPorPis(tarefa.getUsuarioBioId().getPis());
 				if (usuarioBio != null) {
-					/*
-					 * File convFile = File.createTempFile("arquivo", ".txt");
-					 * FileOutputStream fos = new FileOutputStream(convFile);
-					 * fos.write( this.getDecriptoAES().decript(repAutenticado.
-					 * getChaveAES(), usuarioBio.getTemplate())); fos.close();
-					 * InputStream inputStream;
-					 */
-					byte[] dados = this.getCriptoAES().cripto(repAutenticado.getChaveAES(),
-							usuarioBio.getTemplate());
+
+					byte[] dados = this.getCriptoAES().cripto(repAutenticado.getChaveAES(), usuarioBio.getTemplate());
 					InputStream inputStream = new ByteArrayInputStream(dados);
 
 					isr = new InputStreamResource(inputStream);
@@ -152,12 +146,8 @@ public class BiometriaService extends ApiService {
 	 * @return
 	 * @throws ServiceException
 	 */
-	public ListaBio getListaBio() throws ServiceException {
-		Rep rep = this.getRepService().getRep();
-		if (BiometriaService.LISTA_BIO.containsKey(rep.getNumeroSerie())) {
-			return BiometriaService.LISTA_BIO.get(rep.getNumeroSerie());
-		}
-		return null;
+	public Collection<ListaBio> getListaBio() throws ServiceException {
+		return BiometriaService.LISTA_BIO.values();
 	}
 
 	/**

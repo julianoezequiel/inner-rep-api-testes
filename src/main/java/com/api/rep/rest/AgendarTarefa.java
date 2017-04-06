@@ -249,15 +249,14 @@ public class AgendarTarefa extends ApiRestController {
 		UsuarioBio usuarioBio = usuarioBioCmd.toUsuarioBio();
 
 		UsuarioBio usuarioBio2 = this.usuarioBioRepository.findOne(Example.of(usuarioBio));
-
-		if (usuarioBio2 != null) {
-			tarefa.setUsuarioBioId(usuarioBio2);
-			tarefa.setTipoTarefa(CmdHandler.TIPO_CMD.BIOMETRIA.ordinal());
-			return this.tarefaService.salvar(tarefa);
+		if (operacao.equalsIgnoreCase("enviar") && usuarioBio2 == null || usuarioBio2.getTemplate() == null) {
+			throw new ServiceException(HttpStatus.PRECONDITION_FAILED, "Necessário receber a biometria primeiro");
 		} else {
-			throw new ServiceException(HttpStatus.PRECONDITION_FAILED,
-					"Necessário realizar a recepção da biometria primeiro");
+			tarefa.setUsuarioBioId(usuarioBio2);
 		}
+
+		tarefa.setTipoTarefa(CmdHandler.TIPO_CMD.BIOMETRIA.ordinal());
+		return this.tarefaService.salvar(tarefa);
 
 	}
 

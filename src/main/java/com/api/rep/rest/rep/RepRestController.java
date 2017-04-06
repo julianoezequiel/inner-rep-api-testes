@@ -52,7 +52,7 @@ public class RepRestController {
 	 * @return
 	 * @throws ServiceException 
 	 */
-	@RequestMapping(value = "{numSerie}", produces = MediaType.APPLICATION_JSON_UTF8_VALUE, method = RequestMethod.GET)
+	@RequestMapping(value = "numserie/{numSerie}", produces = MediaType.APPLICATION_JSON_UTF8_VALUE, method = RequestMethod.GET)
 	public ResponseEntity<RepDTO> buscar(@PathVariable("numSerie") String numSerie) throws ServiceException {
 		return new ResponseEntity<RepDTO>(new RepDTO(this.repService.buscarPorNumeroSerie(numSerie)), HttpStatus.OK);
 	}

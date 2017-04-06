@@ -73,16 +73,16 @@ public class Rep implements Serializable {
 	@Column(name = "ultimo_nsr")
 	private Integer ultimoNsr;
 	@Column(name = "chave_aes")
-	@Lob
+	//@Lob
 	private Integer[] chaveAES;
 	@Column(name = "chave_rsa_publica")
-	@Lob
+	//@Lob
 	private Integer[] chaveRSAPublica;
 	@Column(name = "expoente")
-	@Lob
+	//@Lob
 	private Integer expoente;
 	@Column(name = "chave_rsa_privada")
-	@Lob
+	//@Lob
 	private byte[] chaveRSAPrivada;
 	@Column(name = "chave_publica")
 	private String chavePublica;

@@ -45,15 +45,15 @@ public class ConfiguracoesCartoes implements Serializable {
     @Basic(optional = false)
     @Column(name = "id")
     private Integer id;
-    @Lob
+    //@Lob
     @Column(name = "buffer_tlm")
     private Integer[] bufferTlm;
     @Column(name = "digitos_fixo")
     private Integer digitosFixo;
-    @Lob
+    //@Lob
     @Column(name = "mascara_barras")
     private Integer[] mascaraBarras;
-    @Lob
+    //@Lob
     @Column(name = "mascara_prox")
     private Integer[] mascaraProx;
     @Column(name = "tipo_barras")

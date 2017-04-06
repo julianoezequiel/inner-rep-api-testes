@@ -50,7 +50,7 @@ public class EmpregadoCmd implements Cmd {
 	/**
 	 * EMPREGADO_POSSUI_BIO
 	 */
-	private Boolean fPB;
+	private String fPB;
 
 	public String getfNome() {
 		return fNome;
@@ -100,11 +100,11 @@ public class EmpregadoCmd implements Cmd {
 		this.fCT = empregadoCartaoTeclado;
 	}
 
-	public Boolean getfPB() {
+	public String getfPB() {
 		return fPB;
 	}
 
-	public void setfPB(Boolean empregadoPossuiBio) {
+	public void setfPB(String empregadoPossuiBio) {
 		this.fPB = empregadoPossuiBio;
 	}
 
@@ -124,7 +124,7 @@ public class EmpregadoCmd implements Cmd {
 		empregado.setEmpregadoNome(fNome);
 		empregado.setEmpregadoNomeExibe(fNEx);
 		empregado.setEmpregadoPis(fPis);
-		empregado.setEmpregadoPossuiBio(fPB);
+		empregado.setEmpregadoPossuiBio(fPB != null && fPB.equals("true"));
 		empregado.setEmpregadoSenha(fSenha);
 		return empregado;
 	}

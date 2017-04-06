@@ -1,14 +1,5 @@
 package com.api.rep.rest.auth;
 
-import java.security.InvalidAlgorithmParameterException;
-import java.security.InvalidKeyException;
-import java.security.NoSuchAlgorithmException;
-import java.security.spec.InvalidKeySpecException;
-
-import javax.crypto.BadPaddingException;
-import javax.crypto.IllegalBlockSizeException;
-import javax.crypto.NoSuchPaddingException;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -39,16 +30,10 @@ public class AuthRestController extends ApiRestController {
 	 * @param repDTO
 	 * @return {@link TokenDTO}
 	 * @throws ServiceException
-	 * @throws InvalidKeySpecException 
-	 * @throws InvalidAlgorithmParameterException 
-	 * @throws BadPaddingException 
-	 * @throws IllegalBlockSizeException 
-	 * @throws NoSuchPaddingException 
-	 * @throws NoSuchAlgorithmException 
-	 * @throws InvalidKeyException 
+	 *
 	 */
 	@RequestMapping(value = CONSTANTES.URL_AUTH_SIGN, consumes = MediaType.APPLICATION_JSON_UTF8_VALUE, produces = MediaType.APPLICATION_JSON_UTF8_VALUE, method = RequestMethod.POST)
-	public ResponseEntity<TokenDTO> autenticar(@RequestBody RepDTO repDTO) throws ServiceException, InvalidKeyException, NoSuchAlgorithmException, NoSuchPaddingException, IllegalBlockSizeException, BadPaddingException, InvalidAlgorithmParameterException, InvalidKeySpecException {
+	public ResponseEntity<TokenDTO> autenticar(@RequestBody RepDTO repDTO) throws ServiceException {
 		return new ResponseEntity<TokenDTO>(this.authService.autenticar(repDTO), HttpStatus.CREATED);
 	}
 

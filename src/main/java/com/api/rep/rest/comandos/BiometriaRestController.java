@@ -56,7 +56,7 @@ public class BiometriaRestController extends ApiRestController {
 	public ResponseEntity<?> enviar(@PathVariable("nsu") Integer nsu) throws ServiceException, IOException {
 		HashMap<String, Object> map = this.biometriaService.enviar(nsu, this.getRepAutenticado());
 		return ResponseEntity.ok().contentLength((long) map.get("tamanho"))
-				.contentType(MediaType.parseMediaType(MediaType.APPLICATION_OCTET_STREAM_VALUE))
+				.contentType(MediaType.parseMediaType(MediaType.MULTIPART_FORM_DATA_VALUE))
 				.body(map.get("arquivo"));
 	}
 
@@ -85,7 +85,7 @@ public class BiometriaRestController extends ApiRestController {
 	 */
 	@RequestMapping(value = "listabio", produces = MediaType.APPLICATION_JSON_UTF8_VALUE, method = RequestMethod.GET)
 	public ResponseEntity<?> receberListaBio() throws ServiceException, JsonProcessingException {
-		return new ResponseEntity<ListaBio>(this.biometriaService.getListaBio(), HttpStatus.OK);
+		return new ResponseEntity<>(this.biometriaService.getListaBio(), HttpStatus.OK);
 	}
 
 	/**

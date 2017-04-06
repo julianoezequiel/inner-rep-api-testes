@@ -46,7 +46,7 @@ public class UsuarioBio implements Serializable {
 	@Size(max = 255)
 	@Column(name = "pis")
 	private String pis;
-	@Lob
+	//@Lob
 	@Column(name = "template")
 	private byte[] template;
 

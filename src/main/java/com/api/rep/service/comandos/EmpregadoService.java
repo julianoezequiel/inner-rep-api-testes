@@ -1,8 +1,6 @@
 package com.api.rep.service.comandos;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
+import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Collection;
@@ -120,7 +118,7 @@ public class EmpregadoService extends ApiService {
 
 	public void receberLista(MultipartFile dados, Rep repAutenticado)
 			throws ServiceException, JsonParseException, JsonMappingException, IOException {
-
+		repAutenticado = this.getRepService().buscarPorNumeroSerie(repAutenticado);
 		List<EmpregadoCmd> empregadoDTOList = this.getMapper().readValue(
 				this.getServiceUtils().dadosCripto(repAutenticado, dados),
 				this.getMapper().getTypeFactory().constructCollectionType(List.class, EmpregadoCmd.class));
@@ -147,10 +145,18 @@ public class EmpregadoService extends ApiService {
 		});
 	}
 
-	public void receberDumping(MultipartFile arquivoListaEmpregados, Rep repAutenticado, Integer nsu) {
+	public void receberDumping(MultipartFile entity, Rep repAutenticado, Integer nsu)
+			throws ServiceException {
 		try {
-			EmpregadoService.dumpingMap.put(repAutenticado.getNumeroSerie(),
-					IOUtils.toByteArray(arquivoListaEmpregados.getInputStream()));
+			repAutenticado = this.getRepService().buscarPorNumeroSerie(repAutenticado);
+			
+			InputStream data = entity.getInputStream();
+
+			byte[] template = this.getDecriptoAES().decript(repAutenticado.getChaveAES(),
+					IOUtils.toByteArray(data)); 
+			LOGGER.info("Tamanho dump empregados armazenado : " + template.length);
+			EmpregadoService.dumpingMap.put(repAutenticado.getNumeroSerie(), template);
+
 			LOGGER.info("Dumping de empregados recebido");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -158,8 +164,8 @@ public class EmpregadoService extends ApiService {
 		}
 	}
 
-	public HashMap<String, Object> enviarDump(Integer nsu, Rep repAutenticado) throws ServiceException {
-
+	public HashMap<String, Object> enviarDump(Integer nsu, Rep repAutenticado) throws ServiceException, IOException {
+		repAutenticado = this.getRepService().buscarPorNumeroSerie(repAutenticado);
 		List<Tarefa> tarefas = this.getTarefaRepository().buscarPorNsu(nsu);
 		InputStreamResource isr = null;
 		HashMap<String, Object> map = new HashMap<>();
@@ -167,22 +173,16 @@ public class EmpregadoService extends ApiService {
 		if (!tarefas.isEmpty()) {
 
 			if (EmpregadoService.dumpingMap.containsKey(repAutenticado.getNumeroSerie())) {
-				try {
-					File convFile = File.createTempFile("dump", ".txt");
-					FileOutputStream fos = new FileOutputStream(convFile);
-					fos.write(EmpregadoService.dumpingMap.get(repAutenticado.getNumeroSerie()));
-					fos.close();
-					InputStream inputStream;
-					inputStream = new FileInputStream(convFile);
+				
+				byte[] dados = EmpregadoService.dumpingMap.get(repAutenticado.getNumeroSerie());
+				LOGGER.info("Tamanho dump empregados lido : " + dados.length);
+				byte[] dadoscripto = this.getCriptoAES().cripto(repAutenticado.getChaveAES(), dados);
+				InputStream inputStream = new ByteArrayInputStream(dadoscripto);
 
-					isr = new InputStreamResource(inputStream);
-					map.put("dump", isr);
-					map.put("tamanho", convFile.length());
-					convFile.deleteOnExit();
-				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
+				isr = new InputStreamResource(inputStream);
+				inputStream.close();
+				map.put("dump", isr);
+				map.put("tamanho", (long) dadoscripto.length);
 			} else {
 				throw new ServiceException(HttpStatus.PRECONDITION_FAILED, "não existe dump na memória do servidor");
 			}

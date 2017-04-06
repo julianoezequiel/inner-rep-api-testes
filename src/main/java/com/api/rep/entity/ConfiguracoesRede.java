@@ -51,7 +51,7 @@ public class ConfiguracoesRede implements Serializable {
 	@Basic(optional = false)
 	@Column(name = "id")
 	private Integer id;
-	@Lob
+	//@Lob
 	@Column(name = "gateway")
 	private Integer[] gateway;
 	@Column(name = "habilita_dhcp")
@@ -60,16 +60,16 @@ public class ConfiguracoesRede implements Serializable {
 	private Integer intervaloCom;
 	@Column(name = "intervalo_comunicacao_nuvem")
 	private Integer intervaloComunicacaoNuvem;
-	@Lob
+	//@Lob
 	@Column(name = "ip_dns")
 	private Integer[] ipDns;
-	@Lob
+	//@Lob
 	@Column(name = "ip_rep")
 	private Integer[] ipRep;
-	@Lob
+	//@Lob
 	@Column(name = "ip_servidor")
 	private Integer[] ipServidor;
-	@Lob
+	//@Lob
 	@Column(name = "mascara_rede")
 	private Integer[] mascaraRede;
 	@Size(max = 255)
@@ -78,7 +78,7 @@ public class ConfiguracoesRede implements Serializable {
 	@Size(max = 255)
 	@Column(name = "nome_rep")
 	private String nomeRep;
-	@Lob
+	//@Lob
 	@Column(name = "numero_mac")
 	private Integer[] numeroMac;
 	@Column(name = "porta_rep")

@@ -46,7 +46,7 @@ public class ConfiguracoesWebServer implements Serializable {
     private Integer id;
     @Column(name = "habilita_porta80")
     private Integer habilitaPorta80;
-    @Lob
+    //@Lob
     @Column(name = "ip_seguro")
     private Integer[] ipSeguro;
     @Column(name = "tipo_config")

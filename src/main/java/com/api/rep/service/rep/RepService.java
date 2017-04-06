@@ -61,11 +61,11 @@ public class RepService {
 	}
 
 	public Rep buscarPorNumeroSerie(String numSerie) throws ServiceException {
-//		Rep rep = this.repRepository.buscarPorNumeroSerie(numSerie);
-//		if (rep == null) {
-//			throw new ServiceException(HttpStatus.UNAUTHORIZED, "Rep não cadastrado");
-//		}
-		return getRep();
+		Rep rep = this.repRepository.buscarPorNumeroSerie(numSerie);
+		if (rep == null) {
+			throw new ServiceException(HttpStatus.UNAUTHORIZED, "Rep não cadastrado");
+		}
+		return rep;
 	}
 
 	public Rep buscarPorNumeroSerie(Rep rep) throws ServiceException {
@@ -85,11 +85,14 @@ public class RepService {
 		if (repDTO.getChaveComunicacao() == null || repDTO.getChaveComunicacao().equals("")) {
 			throw new ServiceException(HttpStatus.PRECONDITION_FAILED, "Chave de comunicação obrigatória");
 		}
-		try {
-			Rep repTeste = this.getRep();
-			repDTO.setId(repTeste.getId());
-		} catch (Exception e) {
-
+		Rep rep;
+		Rep repTeste = this.repRepository.buscarPorNumeroSerie(repDTO.getNumeroSerie());
+		if (repTeste != null) {
+			rep = repTeste;
+			rep.setNumeroSerie(repDTO.getNumeroSerie());
+			rep.setChaveComunicacao(repDTO.getChaveComunicacao());
+		} else {
+			rep = repDTO.getRep();
 		}
 		ConfiguracoesRede configuracoesRede = new ConfiguracoesRede();
 		configuracoesRede = this.configuracoesRedeRepository.save(configuracoesRede);
@@ -97,7 +100,6 @@ public class RepService {
 		Info info = new Info();
 		info = this.infoRepository.save(info);
 
-		Rep rep = repDTO.getRep();
 		rep.setConfiguracoesRedeId(configuracoesRede);
 		rep.setInfoId(info);
 		rep = this.repRepository.save(rep);

@@ -105,10 +105,11 @@ public class EmpregadoRestController extends ApiRestController {
 	 * @param arquivoListaEmpregados
 	 * @return
 	 * @throws ServiceException
+	 * @throws IOException 
 	 */
 	@RequestMapping(value = CONSTANTES.URL_LISTA_EMPREGADO_DUMPING
 			+ "/{nsu}", produces = MediaType.MULTIPART_FORM_DATA_VALUE, method = RequestMethod.GET)
-	public ResponseEntity<?> enviarDump(@PathVariable("nsu") Integer nsu) throws ServiceException {
+	public ResponseEntity<?> enviarDump(@PathVariable("nsu") Integer nsu) throws ServiceException, IOException {
 		HashMap<String, Object> map = this.empregadoService.enviarDump(nsu, this.getRepAutenticado());
 		return ResponseEntity.ok().contentLength((long) map.get("tamanho"))
 				.contentType(MediaType.parseMediaType(MediaType.MULTIPART_FORM_DATA_VALUE)).body(map.get("dump"));

@@ -52,7 +52,7 @@ public class Tarefa implements Serializable {
 	@Size(max = 255)
 	@Column(name = "cpf")
 	private String cpf;
-	@Lob
+	//@Lob
 	@Column(name = "status")
 	private byte[] status;
 	@Column(name = "tentativas")
