@@ -1,5 +1,7 @@
 package com.api.rep.dao;
 
+import java.util.List;
+
 import javax.transaction.Transactional;
 import javax.transaction.Transactional.TxType;
 
@@ -21,6 +23,6 @@ import com.api.rep.entity.UsuarioBio;
 public interface UsuarioBioRepository extends JpaRepository<UsuarioBio, Integer> {
 
 	@Query(value = "SELECT u from UsuarioBio u where u.pis = :pis")
-	UsuarioBio buscarPorPis(@Param("pis") String pis);
+	List<UsuarioBio> buscarPorPis(@Param("pis") String pis);
 
 }

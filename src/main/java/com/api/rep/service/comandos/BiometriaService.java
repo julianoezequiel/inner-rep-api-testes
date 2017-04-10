@@ -10,19 +10,22 @@ import java.util.List;
 import org.apache.commons.io.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.InputStreamResource;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.api.rep.contantes.CONSTANTES;
 import com.api.rep.dao.UsuarioBioRepository;
 import com.api.rep.dto.comandos.ListaBio;
-import com.api.rep.entity.Empregado;
 import com.api.rep.entity.Rep;
 import com.api.rep.entity.Tarefa;
 import com.api.rep.entity.UsuarioBio;
 import com.api.rep.service.ApiService;
 import com.api.rep.service.ServiceException;
 import com.api.rep.service.tarefa.TarefaService;
+import com.fasterxml.jackson.core.JsonParseException;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonMappingException;
 
 @Service
 public class BiometriaService extends ApiService {
@@ -50,7 +53,7 @@ public class BiometriaService extends ApiService {
 		LOGGER.info("Biometria Recebida.");
 		repAutenticado = this.getRepService().buscarPorNumeroSerie(repAutenticado);
 		List<Tarefa> tarefas = this.getTarefaRepository().buscarPorNsu(nsu);
-		UsuarioBio usuarioBio;
+		List<UsuarioBio> usuarioBioList;
 		if (!tarefas.isEmpty()) {
 			try {
 				Tarefa tarefa = tarefas.iterator().next();
@@ -60,11 +63,14 @@ public class BiometriaService extends ApiService {
 
 					byte[] template = this.getDecriptoAES().decript(repAutenticado.getChaveAES(),
 							IOUtils.toByteArray(data));
-
-					usuarioBio = this.usuarioBioRepository.buscarPorPis(tarefa.getUsuarioBioId().getPis());
-					if (usuarioBio == null) {
+					UsuarioBio usuarioBio;
+					usuarioBioList = this.usuarioBioRepository.buscarPorPis(tarefa.getUsuarioBioId().getPis());
+					if (usuarioBioList.isEmpty()) {
 						usuarioBio = new UsuarioBio();
 						usuarioBio.setPis(tarefa.getEmpregadoId().getEmpregadoPis());
+					} else {
+						usuarioBio = usuarioBioList.iterator().next();
+						usuarioBio.setPis(tarefa.getUsuarioBioId().getPis());
 					}
 
 					usuarioBio.setTemplate(template);
@@ -118,21 +124,23 @@ public class BiometriaService extends ApiService {
 		InputStreamResource isr = null;
 		repAutenticado = this.getRepService().buscarPorNumeroSerie(repAutenticado);
 		List<Tarefa> tarefas = this.getTarefaRepository().buscarPorNsu(nsu);
-		UsuarioBio usuarioBio;
+		List<UsuarioBio> usuarioBioList;
 		if (!tarefas.isEmpty()) {
 			Tarefa tarefa = tarefas.iterator().next();
 			if (tarefa.getUsuarioBioId() != null) {
-				usuarioBio = this.usuarioBioRepository.buscarPorPis(tarefa.getUsuarioBioId().getPis());
-				if (usuarioBio != null) {
+				usuarioBioList = this.usuarioBioRepository.buscarPorPis(tarefa.getUsuarioBioId().getPis());
+				if (!usuarioBioList.isEmpty() && usuarioBioList.get(0).getTemplate() != null) {
 
-					byte[] dados = this.getCriptoAES().cripto(repAutenticado.getChaveAES(), usuarioBio.getTemplate());
+					byte[] dados = this.getCriptoAES().cripto(repAutenticado.getChaveAES(),
+							usuarioBioList.get(0).getTemplate());
 					InputStream inputStream = new ByteArrayInputStream(dados);
 
 					isr = new InputStreamResource(inputStream);
 					inputStream.close();
 					map.put("arquivo", isr);
 					map.put("tamanho", (long) dados.length);
-					// convFile.deleteOnExit();
+				} else {
+					throw new ServiceException(HttpStatus.PRECONDITION_FAILED, "Sem digital na base");
 				}
 			}
 		}
@@ -156,18 +164,106 @@ public class BiometriaService extends ApiService {
 	 * 
 	 * @param listaBio
 	 * @param repAutenticado
+	 * @throws ServiceException
+	 * @throws IOException
+	 * @throws JsonMappingException
+	 * @throws JsonParseException
 	 */
-	public void receberListaBioAgendarDigitais(ListaBio listaBio, Rep repAutenticado) {
+	public void receberListaBioAgendarDigitais(MultipartFile dados, Rep repAutenticado)
+			throws JsonParseException, JsonMappingException, IOException, ServiceException {
 
-		if (listaBio != null && listaBio.getPisList() != null) {
-			listaBio.getPisList().stream().forEach(pis -> {
+		repAutenticado = this.getRepService().buscarPorNumeroSerie(repAutenticado);
+
+		ListaBio listaBio = this.getMapper().readValue(this.getServiceUtils().dadosCripto(repAutenticado, dados),
+				ListaBio.class);
+
+		Thread t = new Thread(new AgendarTarefasReceberBio(repAutenticado, listaBio));
+		t.start();
+
+	}
+
+	/**
+	 * Thread de agendamento para receber as digitais
+	 * 
+	 * @author juliano.ezequiel
+	 *
+	 */
+	private class AgendarTarefasReceberBio implements Runnable {
+
+		private Rep repAutenticado;
+		private ListaBio listaBio;
+
+		public AgendarTarefasReceberBio(Rep repAutenticado, ListaBio listaBio) {
+			super();
+			this.repAutenticado = repAutenticado;
+			this.listaBio = listaBio;
+		}
+
+		@Override
+		public void run() {
+			if (this.listaBio != null && this.listaBio.getPisList() != null) {
+				this.listaBio.getPisList().stream().forEach(pis -> {
+					try {
+						Tarefa tarefa = tarefaService.tarefaTeste(CONSTANTES.TIPO_OPERACAO.RECEBER.name(),
+								this.repAutenticado);
+						tarefa.setTipoTarefa(CmdHandler.TIPO_CMD.BIOMETRIA.ordinal());
+
+						List<UsuarioBio> usuarioBioList = usuarioBioRepository.buscarPorPis(pis);
+						UsuarioBio usuarioBio;
+						if (!usuarioBioList.isEmpty()) {
+							usuarioBio = usuarioBioList.iterator().next();
+						} else {
+							usuarioBio = new UsuarioBio();
+							usuarioBio.setPis(pis);
+						}
+
+						usuarioBio = usuarioBioRepository.saveAndFlush(usuarioBio);
+
+						tarefa.setUsuarioBioId(usuarioBio);
+						tarefa = tarefaService.salvar(tarefa);
+						LOGGER.info("Tarefa agendada receber biometria : " + getMapper().writeValueAsString(tarefa));
+					} catch (ServiceException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					} catch (JsonProcessingException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				});
+			}
+
+		}
+	}
+
+	public void agendarTarefasEnvioBio(String numSerie) throws ServiceException {
+		Rep repAutenticado = this.getRepService().buscarPorNumeroSerie(numSerie);
+		Thread t = new Thread(new AgendarEnvioDeBiometrias(repAutenticado));
+		t.start();
+	}
+
+	private class AgendarEnvioDeBiometrias implements Runnable {
+
+		public AgendarEnvioDeBiometrias(Rep repAutenticado) {
+			super();
+			this.repAutenticado = repAutenticado;
+		}
+
+		private final Rep repAutenticado;
+
+		@Override
+		public void run() {
+			List<UsuarioBio> usuarioBioList = usuarioBioRepository.findAll();
+
+			usuarioBioList.stream().forEach(usuarioBio -> {
+				Tarefa tarefa;
 				try {
-					Tarefa tarefa = tarefaService.tarefaTeste(CONSTANTES.TIPO_OPERACAO.RECEBER.name(), repAutenticado);
+					tarefa = tarefaService.tarefaTeste(CONSTANTES.TIPO_OPERACAO.ENVIAR.name(), this.repAutenticado);
+
 					tarefa.setTipoTarefa(CmdHandler.TIPO_CMD.BIOMETRIA.ordinal());
-					Empregado empregado = new Empregado(pis);
-					tarefa.setEmpregadoId(empregado);
-					this.tarefaService.salvar(tarefa);
-				} catch (ServiceException e) {
+					tarefa.setUsuarioBioId(usuarioBio);
+					tarefa = tarefaService.salvar(tarefa);
+					LOGGER.info("Tarefa agendada receber biometria : " + getMapper().writeValueAsString(tarefa));
+				} catch (ServiceException | JsonProcessingException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}

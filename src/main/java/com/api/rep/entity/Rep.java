@@ -86,13 +86,13 @@ public class Rep implements Serializable {
 	private byte[] chaveRSAPrivada;
 	@Column(name = "chave_publica")
 	private String chavePublica;
-	@OneToMany(mappedBy = "repId",cascade = CascadeType.ALL, orphanRemoval = true)
+	@OneToMany(mappedBy = "repId", cascade = CascadeType.ALL, orphanRemoval = true)
 	@JsonIgnore
 	private Collection<Empregado> empregadoCollection;
-	@OneToMany(mappedBy = "repId",cascade = CascadeType.ALL, orphanRemoval = true)
+	@OneToMany(mappedBy = "repId", cascade = CascadeType.ALL, orphanRemoval = true)
 	@JsonIgnore
 	private Collection<Tarefa> tarefaCollection;
-	@OneToMany(mappedBy = "repId",cascade = CascadeType.ALL, orphanRemoval = true)
+	@OneToMany(mappedBy = "repId", cascade = CascadeType.ALL, orphanRemoval = true)
 	@JsonIgnore
 	private Collection<Nsr> nsrCollection;
 	@JoinColumn(name = "configuracoes_senha_id", referencedColumnName = "id")
@@ -392,8 +392,8 @@ public class Rep implements Serializable {
 		repMonitor.setUltimoIp(ultimoIp);
 		return repMonitor;
 	}
-	
-	public Rep clear(Rep rep){
+
+	public Rep clear(Rep rep) {
 		rep.setAjustesBioId(null);
 		rep.setConfiguracoesCartoesId(null);
 		rep.setConfiguracoesRedeId(null);
